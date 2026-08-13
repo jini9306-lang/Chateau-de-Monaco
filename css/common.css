@@ -121,9 +121,10 @@ h1,h2,h3,h4,h5,h6{
     left: 0;
     z-index: 100;
     width: 100%;
+}
+body[data-nav="static"] #header {
     background: rgba(240, 238, 235, 0.8);
 }
-
 .header {
     display: flex;
     align-items: center;
