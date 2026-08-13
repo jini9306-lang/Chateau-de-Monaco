@@ -148,10 +148,10 @@
     <script>
         // 헤더,푸터 불러오기
         $(function () {
-            $("#header-include").load("/partials/header.html", function () {
+            $("#header-include").load("./partials/header.html", function () {
                 // 헤더 로드 완료 후 로고 색 적용
                 const logoColor = $("body").data("logo") || "white"; // 기본값 white
-                $("#logoImg").attr("src", "/img/logo_" + logoColor + ".png");
+                $("#logoImg").attr("src", "./img/logo_" + logoColor + ".png");
 
                 // 기존 로고 클릭 토글 로직도 여기서 초기화
                 $('.logo a').on('click', function (e) {
@@ -160,7 +160,7 @@
                 });
             });
 
-            $("#footer-include").load("/partials/footer.html");
+            $("#footer-include").load("./partials/footer.html");
         });
 
         // 헤더로고 토글
