@@ -3,6 +3,22 @@ import React from 'react'
 import '../css/footer.css'
 
 const Footer = () => {
+
+    const handleAnchorClick = (e, path, id) => {
+        if (window.innerWidth <= 960) {
+            const target = document.getElementById(id)
+
+            if (target) {
+                e.preventDefault()
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                })
+            }
+        }
+    }
+
   return (
     <footer id="footer">
     <div class="container">
@@ -12,13 +28,54 @@ const Footer = () => {
                     <a href="/Chateau-de-Monaco/stay/index.html">
                         <h4 class="h4_ko">STAY</h4>
                     </a>
-                    <div class="list 1">
-                        <a href="/Chateau-de-Monaco/stay/index.html#gallery" class="text_ko"><span>갤러리</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#pool" class="text_ko"><span>수영장</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#restaurant" class="text_ko"><span>레스토랑</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#spa" class="text_ko"><span>스파</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#standard" class="text_ko"><span>스탠다드 룸</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#suite" class="text_ko"><span>스위트 룸</span></a>
+                    <div className="list 1">
+                        <a
+                            href="/Chateau-de-Monaco/stay/index.html#gallery"
+                            className="text_ko"
+                            onClick={(e) => handleAnchorClick(e, '/Chateau-de-Monaco/stay/index.html', 'gallery')}
+                        >
+                            <span>갤러리</span>
+                        </a>
+
+                        <a
+                            href="/Chateau-de-Monaco/stay/index.html#pool"
+                            className="text_ko"
+                            onClick={(e) => handleAnchorClick(e, '/Chateau-de-Monaco/stay/index.html', 'pool')}
+                        >
+                            <span>수영장</span>
+                        </a>
+
+                        <a
+                            href="/Chateau-de-Monaco/stay/index.html#restaurant"
+                            className="text_ko"
+                            onClick={(e) => handleAnchorClick(e, '/Chateau-de-Monaco/stay/index.html', 'restaurant')}
+                        >
+                            <span>레스토랑</span>
+                        </a>
+
+                        <a
+                            href="/Chateau-de-Monaco/stay/index.html#spa"
+                            className="text_ko"
+                            onClick={(e) => handleAnchorClick(e, '/Chateau-de-Monaco/stay/index.html', 'spa')}
+                        >
+                            <span>스파</span>
+                        </a>
+
+                        <a
+                            href="/Chateau-de-Monaco/stay/index.html#standard"
+                            className="text_ko"
+                            onClick={(e) => handleAnchorClick(e, '/Chateau-de-Monaco/stay/index.html', 'standard')}
+                        >
+                            <span>스탠다드 룸</span>
+                        </a>
+
+                        <a
+                            href="/Chateau-de-Monaco/stay/index.html#suite"
+                            className="text_ko"
+                            onClick={(e) => handleAnchorClick(e, '/Chateau-de-Monaco/stay/index.html', 'suite')}
+                        >
+                            <span>스위트 룸</span>
+                        </a>
                     </div>
                 </article>
                 <article id="experiences">

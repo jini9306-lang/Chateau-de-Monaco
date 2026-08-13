@@ -31,7 +31,7 @@ const Stay = () => {
       // 2) 문이 다 닫힌 후 내용 교체
       setIsOpen(true)               
       // 3) 다시 열기
-    },1600)                          
+    },1000)                          
     // CSS transition 시간(0.8s)과 맞춤
   }
   

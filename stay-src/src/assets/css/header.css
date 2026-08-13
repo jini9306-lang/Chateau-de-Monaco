@@ -97,7 +97,7 @@
 
 /* 헤더 색상 변경 */
 #header.change .logo img {
-    content: url("../img/logo_green.png");
+    content: url("/Chateau-de-Monaco/stay/img/logo_green.png");
     /* 푸터색 로고 */
 }
 

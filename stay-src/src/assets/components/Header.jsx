@@ -24,9 +24,9 @@ const Header = ({ logoColor = 'green', navStatic = true }) => {
       <div className="container">
         <header className="header">
           <h1 className="logo">
-            <a href="/" onClick={handleLogoClick}>
+            <button href="/" onClick={handleLogoClick}>
               <img src={`${import.meta.env.BASE_URL}img/logo_${logoColor}.png`} alt="로고이미지" />
-            </a>
+            </button>
           </h1>
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
