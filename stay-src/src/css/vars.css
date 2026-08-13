@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+:root{
+    --mainFontEn:'Roboto', sans-serif;
+    --mainFontKo:'Pretendard';
+    --titleFontKo:'MaruBuri';
+    --titleFontEg:"Playfair", serif;
+
+    --mainBg_color:#F0EEEB;
+    --subBg100:#E7E0D7;
+
+    --fontMainColor:#1E1E1D;
+    --fontSub100:#746D64;
+    --fontSub200:#AE9C88;
+
+    --footerBg_color:#4A6757;
+
+    /*기본 폰트 설정*/
+    font-family: var(--mainFontEn);
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+
+body{
+    background-color: var(--mainBg_color);
+    /* 배경색 */
+    color: var(--fontMainColor);
+    /* 기본 글꼴 컬러 */
+}
+
+@media(max-width:960px){
+    :root{
+        font-size: 16px;
+    }
+}
+@media(max-width:480px){
+    :root{
+        font-size: 14px;
+    }
+}
+
