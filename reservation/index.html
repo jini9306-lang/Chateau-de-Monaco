@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../css/vars.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="../css/intro.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/font.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/all.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/vars.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/common.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/style.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/intro.css">
 
     <link rel="icon" href="../img/icon.png">
 
@@ -183,10 +183,10 @@
     <script>
         // 헤더,푸터 불러오기
         $(function () {
-            $("#header-include").load("/partials/header.html", function () {
+            $("#header-include").load("/Chateau-de-Monaco/partials/header.html", function () {
                 // 헤더 로드 완료 후 로고 색 적용
                 const logoColor = $("body").data("logo") || "white"; // 기본값 white
-                $("#logoImg").attr("src", "/img/logo_" + logoColor + ".png");
+                $("#logoImg").attr("src", "/Chateau-de-Monaco/img/logo_" + logoColor + ".png");
 
                 // 서브 페이지는 처음부터 .change 상태로 고정 (진한 글자색 사용)
                 if ($('body').attr('data-nav') === 'static') {
@@ -200,7 +200,7 @@
                 });
             });
 
-            $("#footer-include").load("/partials/footer.html");
+            $("#footer-include").load("/Chateau-de-Monaco/partials/footer.html");
         });
 
         $('.logo a').on('click', function (e) {
