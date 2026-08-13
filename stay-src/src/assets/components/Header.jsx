@@ -30,11 +30,11 @@ const Header = ({ logoColor = 'green', navStatic = true }) => {
           </h1>
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
-              <li><a href="/"><span>HOME</span></a></li>
-              <li><a href="/stay/"><span>STAY</span></a></li>
-              <li><a href="/experiences/"><span>EXPERIENCES</span></a></li>
-              <li><a href="/location/"><span>LOCATION</span></a></li>
-              <li><a href="/reservation/"><span>RESERVATION</span></a></li>
+              <li><a href="/Chateau-de-Monaco/index.html"><span>HOME</span></a></li>
+              <li><a href="/Chateau-de-Monaco/stay/index.html"><span>STAY</span></a></li>
+              <li><a href="/Chateau-de-Monaco/experiences/index.html"><span>EXPERIENCES</span></a></li>
+              <li><a href="/Chateau-de-Monaco/location/index.html"><span>LOCATION</span></a></li>
+              <li><a href="/Chateau-de-Monaco/reservation/index.html"><span>RESERVATION</span></a></li>
             </ul>
             <div className="translate">
               <select className="nation" defaultValue="KO">
