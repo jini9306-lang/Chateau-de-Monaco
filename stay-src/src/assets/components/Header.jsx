@@ -24,16 +24,13 @@ const Header = ({ logoColor = 'green', navStatic = true }) => {
       <div className="container">
         <header className="header">
           <h1 className="logo">
-              <button type="button" onClick={handleLogoClick}>
-                <img
-                  src={`${import.meta.env.BASE_URL}img/logo_${logoColor}.png`}
-                  alt="로고이미지"
-                />
-              </button>
+            <a href="/" onClick={handleLogoClick}>
+              <img src={`${import.meta.env.BASE_URL}img/logo_${logoColor}.png`} alt="로고이미지" />
+            </a>
           </h1>
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
-              <li><a href={`${import.meta.env.BASE_URL}index/html`}><span>HOME</span></a></li>
+              <li><a href="/Chateau-de-Monaco/"><span>HOME</span></a></li>
               <li><a href="/Chateau-de-Monaco/stay/"><span>STAY</span></a></li>
               <li><a href="/Chateau-de-Monaco/experiences/"><span>EXPERIENCES</span></a></li>
               <li><a href="/Chateau-de-Monaco/location/"><span>LOCATION</span></a></li>
