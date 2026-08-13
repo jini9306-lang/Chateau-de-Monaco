@@ -220,10 +220,10 @@
     <script>
         // 헤더,푸터 불러오기
         $(function () {
-            $("#header-include").load("/partials/header.html", function () {
+            $("#header-include").load("/Chateau-de-Monaco/partials/header.html", function () {
                 // 헤더 로드 완료 후 로고 색 적용
                 const logoColor = $("body").data("logo") || "white"; // 기본값 white
-                $("#logoImg").attr("src", "/img/logo_" + logoColor + ".png");
+                $("#logoImg").attr("src", "/Chateau-de-Monaco/img/logo_" + logoColor + ".png");
 
                 // 서브 페이지는 처음부터 .change 상태로 고정 (진한 글자색 사용)
                 if ($('body').attr('data-nav') === 'static') {
@@ -237,7 +237,7 @@
                 });
             });
 
-            $("#footer-include").load("/partials/footer.html");
+            $("#footer-include").load("/Chateau-de-Monaco/partials/footer.html");
         });
 
 

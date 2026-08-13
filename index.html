@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/vars.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/font.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/vars.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/common.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/style.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/media.css">
+    <link rel="stylesheet" href="/Chateau-de-Monaco/css/intro.css">
 
     <link rel="icon" href="./img/icon.png">
     
@@ -38,11 +38,11 @@
         <div class="container">
             <section class="delay">
                 <span class="del delay_1">Château de Monaco</span>
-                <img class="del delay_2" src="./img/sea2.png" alt="호텔_전경_사진">
-                <img class="del delay_3" src="./img/gallery.png" alt="갤러리_사진">
-                <img class="del delay_4" src="./img/sea.png" alt="호텔_바다_사진">
-                <img class="del delay_5" src="./img/garden.png" alt="정원_사진">
-                <img class="del delay_6" src="./img/ceiling.png" alt="전창_작품_사진">
+                <img class="del delay_2" src="/Chateau-de-Monaco/img/sea2.png" alt="호텔_전경_사진">
+                <img class="del delay_3" src="/Chateau-de-Monaco/img/gallery.png" alt="갤러리_사진">
+                <img class="del delay_4" src="/Chateau-de-Monaco/img/sea.png" alt="호텔_바다_사진">
+                <img class="del delay_5" src="/Chateau-de-Monaco/img/garden.png" alt="정원_사진">
+                <img class="del delay_6" src="/Chateau-de-Monaco/img/ceiling.png" alt="전창_작품_사진">
             </section>
         </div>
     </section>
@@ -67,43 +67,43 @@
                 </article> <!-- .main3_left -->
 
                 <figure class="main3_img main3_img1">
-                    <img src="./img/main3_1.png" alt="호텔 전망">
+                    <img src="/Chateau-de-Monaco/img/main3_1.png" alt="호텔 전망">
                 </figure>
 
                 <figure class="main3_img main3_img2">
-                    <img src="./img/main3_2.png" alt="호텔 조식">
+                    <img src="/Chateau-de-Monaco/img/main3_2.png" alt="호텔 조식">
                 </figure>
 
                 <figure class="main3_img main3_img3">
-                    <img src="./img/main3_3.png" alt="호텔 외관">
+                    <img src="/Chateau-de-Monaco/img/main3_3.png" alt="호텔 외관">
                 </figure>
 
                 <figure class="main3_img main3_img4">
-                    <img src="./img/main3_4.png" alt="호텔 계단">
+                    <img src="/Chateau-de-Monaco/img/main3_4.png" alt="호텔 계단">
                 </figure>
 
                 <figure class="main3_img main3_img5">
-                    <img src="./img/main3_5.png" alt="호텔 가든">
+                    <img src="/Chateau-de-Monaco/img/main3_5.png" alt="호텔 가든">
                 </figure>
 
                 <figure class="main3_img main3_img6">
-                    <img src="./img/main3_6.png" alt="호텔 선셋">
+                    <img src="/Chateau-de-Monaco/img/main3_6.png" alt="호텔 선셋">
                 </figure>
 
                 <figure class="main3_img main3_img7">
-                    <img src="./img/main3_7.png" alt="와인">
+                    <img src="/Chateau-de-Monaco/img/main3_7.png" alt="와인">
                 </figure>
 
                 <figure class="main3_img main3_img8">
-                    <img src="./img/main3_8.png" alt="불꽃놀이">
+                    <img src="/Chateau-de-Monaco/img/main3_8.png" alt="불꽃놀이">
                 </figure>
 
                 <figure class="main3_img main3_img9">
-                    <img src="./img/main3_9.png" alt="불꽃놀이">
+                    <img src="/Chateau-de-Monaco/img/main3_9.png" alt="불꽃놀이">
                 </figure>
 
                 <figure class="main3_img main3_img10">
-                    <img src="./img/main3_10.png" alt="불꽃놀이">
+                    <img src="/Chateau-de-Monaco/img/main3_10.png" alt="불꽃놀이">
                 </figure>
 
                 <article class="main3_right">
@@ -148,10 +148,10 @@
     <script>
         // 헤더,푸터 불러오기
         $(function () {
-            $("#header-include").load("./partials/header.html", function () {
+            $("#header-include").load("/Chateau-de-Monaco/partials/header.html", function () {
                 // 헤더 로드 완료 후 로고 색 적용
                 const logoColor = $("body").data("logo") || "white"; // 기본값 white
-                $("#logoImg").attr("src", "./img/logo_" + logoColor + ".png");
+                $("#logoImg").attr("src", "/Chateau-de-Monaco/img/logo_" + logoColor + ".png");
 
                 // 기존 로고 클릭 토글 로직도 여기서 초기화
                 $('.logo a').on('click', function (e) {
@@ -160,7 +160,7 @@
                 });
             });
 
-            $("#footer-include").load("./partials/footer.html");
+            $("#footer-include").load("/Chateau-de-Monaco/partials/footer.html");
         });
 
         // 헤더로고 토글
