@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/vars.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/intro.css">
+
+    <link rel="icon" href="../img/icon.png">
+
+    <title>Château de Monaco</title>
+</head>
+<body data-logo="green" data-nav="static">
+    <div id="siteIntro">
+        <div class="intro__lockup">
+            <p class="intro__eyebrow">Château de</p>
+            <div class="intro__bar"><div id="introBarFill"></div></div>
+            <h1 class="intro__title">Monaco</h1>
+        </div>
+    </div>
+
+    <div id="header-include"></div>
+
+    <section id="reservation">
+        <div class="container">
+            <section class="reservation">
+                <h2 class="h2_en">reservation</h2>
+                <div class="art_wrap">
+
+                    <article class="step1 active">
+                        <h4 class="h4_en level"></h4>
+                        <div class="invisible">
+                            <p class="request">머무시는 날짜와 인원을 선택해 주세요.</p>
+                            <ul>
+                                <li class="date">
+                                    <h3 class="h3_ko">날짜 선택</h3>
+                                    <div class="num_wrap">
+                                        <div class="check_in">
+                                            <label class="h4_en">check in</label>
+                                            <input type="date" class="h3_ko" name="checkIn">   
+                                        </div>
+                                        <div class="check_out">
+                                            <label class="h4_en">check out</label>
+                                            <input type="date" class="h3_ko" name="checkOut">   
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="people">
+                                    <h3 class="h3_ko">인원 선택</h3>
+                                    <div class="num_wrap">
+                                        <div class="adult">
+                                            <label class="h4_en">adult</label>
+                                            <div class="num_group">
+                                                <button class="btn_small minus">-</button>
+                                                <input type="number" class="h3_ko" placeholder="0">   
+                                                <button class="btn_small plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="child">
+                                            <label class="h4_en">child</label>
+                                            <div class="num_group">
+                                                <button class="btn_small minus">-</button>
+                                                <input type="number" class="h3_ko" placeholder="0">   
+                                                <button class="btn_small plus">+</button>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="step2">
+                        <h4 class="h4_en level"></h4>
+                        <div class="invisible">
+                            <p class="request">원하시는 방의 분위기를 선택해 주세요.</p>
+                            <ul>
+                                <li class="ivoire">
+                                    <span class="view"></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">이부아르 룸</h3>
+                                        <p class="desc h4_ko">밝고 여백이 넓은 갤러리 화이트 톤</p>
+                                    </div>
+                                    <span class="check_box"></span>
+                                </li>
+                                <li class="noir">
+                                    <span class="view"></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">누아 룸</h3>
+                                        <p class="desc">깊고 차분한 에스프레소 브라운 톤</p>
+                                    </div>
+                                    <span class="check_box"></span>
+                                </li>
+                            </ul>
+                        </div> 
+                    </article>
+                    <article class="step3">
+                        <h4 class="h4_en level"></h4>
+                        <div class="invisible">
+                            <p class="request">웰컴 드링크를 선택해 주세요.</p>
+                            <ul>
+                                <li class="champagne">
+                                    <span class="view"><i class="fa-solid fa-martini-glass-empty"></i></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">샴페인</h3>
+                                        <p class="desc">모나코의 저녁을 여는 클래식</p>
+                                    </div>
+                                    <span class="check_box"></span>
+                                </li>
+                                <li class="ice_tea">
+                                    <span class="view"><i class="fa-solid fa-wine-glass-empty"></i></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">로컬 아이스티</h3>
+                                        <p class="desc">지중해 허브로 우린 시그니처 티</p>
+                                    </div>
+                                    <span class="check_box"></span>
+                                </li>
+                                <li class="espresso">
+                                    <span class="view"><i class="fa-solid fa-mug-saucer"></i></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">에스프레소</h3>
+                                        <p class="desc">모나코의 대표 커피</p>
+                                    </div>
+                                    <span class="check_box"></span>
+                                </li> 
+                            </ul>
+                        </div> 
+                    </article>
+                    <article class="step4"> 
+                        <h4 class="h4_en level"></h4>
+                        <div class="invisible">
+                            <p class="request">조식 시간을 선택해 주세요.</p>
+                            <ul>
+                                <li class="early">
+                                    <span class="view"><i class="fa-regular fa-clock"></i></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">이른 아침</h3>
+                                        <p class="desc">7시 ~ 9시</p>
+                                    </div>
+                                    <span class="check_box"></span>
+                                </li>
+                                <li class="leisurely">
+                                    <span class="view"><i class="fa-regular fa-clock"></i></span>
+                                    <div class="title">
+                                        <h3 class="h3_ko">여유롭게</h3>
+                                        <p class="desc">9시 ~ 11시</p>
+                                    </div>    
+                                    <span class="check_box"></span>
+                                </li>
+                            </ul>
+                        </div> 
+                    </article>
+
+                    <!-- 예약 완료 -->
+                    <article class="complete">
+                        <div class="complete_inner">
+                            <h3 class="h3_ko">예약되었습니다.</h3>
+                            <p class="h4_ko">
+                                <span class="h4_en">Château de Monaco</span>에서<br>
+                                편안한 시간을 보내시길 바랍니다.
+                            </p>
+                            <button class="btn_small btn_home">HOME</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="btn_area">
+                    <button type="button" class="btn_big back">BACK</button>
+                    <button type="button" class="btn_big next">NEXT</button>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <div id="footer-include"></div>
+    
+    <script src="../intro.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // 헤더,푸터 불러오기
+        $(function () {
+            $("#header-include").load("/partials/header.html", function () {
+                // 헤더 로드 완료 후 로고 색 적용
+                const logoColor = $("body").data("logo") || "white"; // 기본값 white
+                $("#logoImg").attr("src", "/img/logo_" + logoColor + ".png");
+
+                // 서브 페이지는 처음부터 .change 상태로 고정 (진한 글자색 사용)
+                if ($('body').attr('data-nav') === 'static') {
+                    $('#header').addClass('change');
+                }
+
+                // 기존 로고 클릭 토글 로직도 여기서 초기화
+                $('.logo a').on('click', function (e) {
+                    e.preventDefault();
+                    $('.nav').toggleClass('nav_open');
+                });
+            });
+
+            $("#footer-include").load("/partials/footer.html");
+        });
+
+        $('.logo a').on('click', function (e) {
+            if ($('body').attr('data-nav') === 'static') return;  // 서브 페이지는 그냥 이동
+            e.preventDefault();
+            $('.nav').toggleClass('nav_open');
+        });
+        
+
+        // 체크박스 한 개만 선택
+        $('.check_box').on('click', function () {
+            // 모든 기존 체크박스 해제
+            $(this)
+                .closest('article')
+                .find('.check_box')
+                .removeClass('checked');
+            // 선택한 박스 체크
+            $(this).addClass('checked');
+        });
+
+        // back, next버튼
+        $(function () {
+            /* 예약 STEP 관련 변수 */
+            let currentStep = 1;
+            // 현재 몇 번째 STEP인지 저장하는 변수. 처음 페이지에 들어오면 STEP 1부터 시작하므로 1
+            const totalStep = 4;
+            // 전체 STEP 개수
+
+            // reservation
+            function validateStep() {
+
+                // 각 스텝 유효성 겁사
+                if (currentStep === 1) {
+                    // step1 날짜선택
+                    const checkIn = $('.step1 input[name="checkIn"]').val();
+                    const checkOut = $('.step1 input[name="checkOut"]').val();
+
+                    if (!checkIn || !checkOut) {
+                        alert('체크인과 체크아웃 날짜를 선택해주세요.');
+                        return false;
+                    }
+
+                    // 체크인 날짜가 체크아웃 날짜보다 늦은 경우
+                    if (checkIn >= checkOut) {
+                        alert('체크아웃 날짜는 체크인 날짜보다 늦어야 합니다.');
+                        return false;
+                    }
+
+                    // 인원 선택 안된 경우
+                    const adultCount = Number($('.step1 .adult input').val());
+
+                    if (adultCount < 1) {
+                        alert('성인 인원은 1명 이상 선택해주세요.');
+                        return false;
+                    }
+                }
+                
+
+
+                // STEP 2 ~ 4
+                if (currentStep >= 2) {
+                    // 체크된 개수
+                    const checkedCount = $('.step' + currentStep + ' .check_box.checked').length;
+
+                    if (checkedCount === 0) {
+                        alert('항목을 하나 선택해주세요.');
+                        return false;
+                    }
+
+                }
+                // 모든 조건을 통과했다면 true를 반환
+                return true;
+            }
+            
+
+            /* STEP 화면 변경 함수 */
+            function updateStep() {
+                /* 1. 기존 STEP 내용 전부 숨기기 */
+                $('.art_wrap article')
+                    .removeClass('active');
+
+                /* 2. 현재 STEP 보여주기 */
+                $('.art_wrap .step' + currentStep)
+                    .addClass('active');
+
+                // 3. level 텍스트 변경
+                $('.art_wrap article').each(function (index) {
+                    const stepNumber = index + 1;
+                    // index는 0부터 시작하기 때문에 +1
+                    const number = String(stepNumber).padStart(2, '0');
+
+                    $(this)
+                        .find('.level')
+                        .text(number);
+
+                });
+
+
+                /* 4. BACK 버튼 상태 변경 */
+                if (currentStep === 1) {
+                    $('.btn_area .back').css('visibility', 'hidden');
+                } else {
+                    $('.btn_area .back').css('visibility', 'visible');
+                }
+
+                /* 5. NEXT 버튼 글자 변경 */
+                if (currentStep === totalStep) {
+                    // step 5 에서 reserve로 바꾸기
+                    $('.btn_area .next')
+                        .text('RESERVE');
+                } else {
+                    $('.btn_area .next')
+                        .text('NEXT');
+                }
+
+            }
+
+
+
+            /* NEXT 버튼 클릭 이벤트 */
+            $('.btn_area .next').on('click', function () {
+                // 유효성 검사 완료 후 넘어가기
+                if (!validateStep()) {
+                    return;
+                }
+                if (currentStep < totalStep) {
+                    currentStep++;
+                    updateStep();
+                    return;
+                }
+                $('.art_wrap article')
+                    .removeClass('active');
+                $('.art_wrap .complete')
+                    .addClass('active');
+                $('.btn_area')
+                    .hide();
+
+            });
+
+
+
+            /* BACK 버튼 클릭 이벤트 */
+
+
+            $('.btn_area .back').on('click', function () {
+                if (currentStep > 1) {
+                    currentStep--;
+                    updateStep();
+                }
+            });
+
+
+
+            /* 처음 페이지에 들어왔을 때 STEP 1을 보여주도록 updateStep()을 한 번 실행해줌. */
+            updateStep();
+
+
+            // 인원 추가버튼
+            // 플러스
+            $('.num_group .plus').on('click', function () {
+                const $input = $(this)
+                    .siblings('input');
+                let value = Number($input.val());
+                value++;
+                $input.val(value);
+            });
+
+            // 마이너스
+            $('.num_group .minus').on('click', function () {
+                const $input = $(this)
+                    .siblings('input');
+                let value = Number($input.val());
+                const min = Number(
+                    $input.attr('min')
+                );
+                value--;
+                if (value < min) {
+                    value = min;
+                }
+                $input.val(value);
+            });
+        });
+
+        // 홈으로 이동
+        $('.btn_home').on('click', function () {
+            location.href = '../index.html';
+        });
+    </script>
+</body>
+</html>

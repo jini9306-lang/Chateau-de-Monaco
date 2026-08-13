@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+
+@media (max-width: 1500px) {
+  .container { width: 100%; max-width: 1400px; padding: 0 24px; }
+  .page { padding-left: 24px; padding-right: 24px; }
+  .banner-content { width: 90%; }
+}
+
+@media (max-width: 900px) {
+  .card-row { flex-direction: column; }
+  .map-panel { flex-direction: column; height: auto; }
+  .map-sidebar { width: auto; border-right: none; border-bottom: 1px solid var(--subBg100); }
+  #map { height: 400px; }
+  .banner-transit { flex-direction: column; gap: 8px; align-items: center; }
+
+  /* Arrival cards stack full-width; the side-by-side "expand takes over
+     the row" choreography doesn't apply, so collapsed siblings just hide
+     instead of shrinking to zero width (which left empty vertical gaps). */
+  .arrival-card { width: 100%; margin-right: 0; margin-bottom: 16px; }
+  .arrival-card:last-child { margin-bottom: 0; }
+  .arrival-row.has-expanded .arrival-card { display: none; }
+  .arrival-row.has-expanded .arrival-card.is-expanded { display: flex; }
+
+  .attractions-row .attraction-card { margin-bottom: 24px; }
+  .attractions-row .attraction-card:last-child { margin-bottom: 0; }
+
+  .map-tabs { flex-wrap: wrap; row-gap: 8px; }
+  .map-detail-card { left: 16px; right: 16px; width: auto; bottom: 16px; }
+
+  .section-title { font-size: 32px; }
+  .divider { margin: 36px 0; }
+}
+
+@media (max-width: 480px) {
+  .banner { height: 320px; }
+  .banner-content { top: 50%; transform: translate(-50%, -50%); width: 88%; }
+  .banner-title { font-size: 22px; letter-spacing: 3px; }
+  .banner-subtitle { font-size: 12px; letter-spacing: 2px; }
+  .banner-transit { margin-top: 22px; font-size: 13px; }
+
+  .page { padding-top: 32px; padding-bottom: 64px; }
+  .section-title { font-size: 26px; }
+  .divider { margin: 28px 0; }
+
+  .attraction-img { height: 220px; }
+  .attraction-name { font-size: 22px; }
+
+  .map-tab { padding: 0 12px; font-size: 13px; }
+  #map { height: 320px; }
+
+  .modal-overlay { padding: 16px; }
+}

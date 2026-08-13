@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+/* experiences */
+#experiences_3{
+    /* perspective:1200px; */
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+
+.exp_wrap{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    perspective: 1000px;
+    /* overflow: hidden;  */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+  
+}
+.exp_wrap .exp{
+   position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 340px;
+    height: 600px;
+    margin-left: -170px;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+/* 각각위치지정 */
+.exp_wrap .exp_1{
+    
+   transform: translateX(-850px) scale(.7) rotateY(25deg);
+    z-index: 1;
+}
+.exp_wrap .exp_2{
+     transform: translateX(-600px) scale(.85) rotateY(15deg);
+    z-index: 2;
+}
+.exp_wrap .exp_3{
+      transform: translateX(-290px) scale(1);
+    z-index: 5;
+}
+.exp_wrap .exp_4{
+    transform: translateX(20px) scale(.85) rotateY(-15deg);
+    z-index: 2;
+}
+.exp_wrap .exp_5{
+    transform: translateX(270px) scale(.7) rotateY(-25deg);
+    z-index: 1;
+}
+
+
+
+/* 세번째 active들어간 값만 밝게*/
+.exp {
+
+    filter: brightness(55%);
+
+}
+
+.exp.active {
+
+    filter: brightness(100%);
+
+}
+
+
+
+
+
+/* birthday 지움 */
+.exp_wrap .exp .exp_img{
+    transform: rotateY(0deg);
+}
+.exp_wrap .exp .exp_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.exp_wrap .exp .exp_img,
+.exp_wrap .exp  .exp_left{
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+.exp_wrap .exp  .exp_left{
+  transform: rotateY(180deg);
+
+    margin: 0;
+    padding: 80px 70px;
+    box-sizing: border-box;
+
+    background-color: #eee9e1;
+    border: 1px solid var(--fontSub200);
+        margin: 0 auto;
+   
+}
+.exp_wrap .exp  .exp_left .selected{
+    position: relative;
+}
+.exp_wrap .exp  .exp_left .selected::after{
+    content: "";
+    border: 1px solid var(--fontSub200);
+    width: 52px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+
+}
+
+.exp_wrap .exp  .exp_left .selected p{
+    margin-bottom: 40px;
+}
+
+.exp_wrap .exp  .exp_left .exp_tit{}
+
+.exp_wrap .exp  .exp_left .exp_desc{
+    padding: 50px 0;
+}
+.exp_wrap .exp .exp_left .exp_desc p{
+    
+}
+
+
+.exp_wrap .exp  .exp_text{
+
+}
+.exp_wrap .exp  .exp_text p{
+   padding : 10px 0 0 0;
+}
+
+.exp_wrap .exp  .exp_btn{
+    margin-top: 20px;
+}
+
+/* birthday */
+.exp_wrap .exp .birthday{
+   position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+/* spa */
+.exp_wrap .exp .spa{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+/* proposal */
+.exp_wrap .exp .proposal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+.exp_wrap .exp .proposal .exp_text{
+    padding: 5px 10px 5px 0px;
+    
+}
+
+/* honeymoon */
+.exp_wrap .exp .honeymoon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}/*  */
+.exp_wrap .exp .anniversary{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+
+
