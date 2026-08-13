@@ -24,17 +24,20 @@ const Header = ({ logoColor = 'green', navStatic = true }) => {
       <div className="container">
         <header className="header">
           <h1 className="logo">
-            <a href="/" onClick={handleLogoClick}>
-              <img src={`${import.meta.env.BASE_URL}img/logo_${logoColor}.png`} alt="로고이미지" />
-            </a>
+              <button type="button" onClick={handleLogoClick}>
+                <img
+                  src={`${import.meta.env.BASE_URL}img/logo_${logoColor}.png`}
+                  alt="로고이미지"
+                />
+              </button>
           </h1>
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
-              <li><a href="/Chateau-de-Monaco/index.html"><span>HOME</span></a></li>
-              <li><a href="/Chateau-de-Monaco/stay/index.html"><span>STAY</span></a></li>
-              <li><a href="/Chateau-de-Monaco/experiences/index.html"><span>EXPERIENCES</span></a></li>
-              <li><a href="/Chateau-de-Monaco/location/index.html"><span>LOCATION</span></a></li>
-              <li><a href="/Chateau-de-Monaco/reservation/index.html"><span>RESERVATION</span></a></li>
+              <li><a href="/Chateau-de-Monaco/"><span>HOME</span></a></li>
+              <li><a href="/Chateau-de-Monaco/stay/"><span>STAY</span></a></li>
+              <li><a href="/Chateau-de-Monaco/experiences/"><span>EXPERIENCES</span></a></li>
+              <li><a href="/Chateau-de-Monaco/location/"><span>LOCATION</span></a></li>
+              <li><a href="/Chateau-de-Monaco/reservation/"><span>RESERVATION</span></a></li>
             </ul>
             <div className="translate">
               <select className="nation" defaultValue="KO">
