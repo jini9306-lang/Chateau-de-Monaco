@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@media (max-width:1410px) {
+    .container{
+        width: 100%;
+    }
+    .reservation .art_wrap article{
+        padding: 30px;
+    }
+}
+@media (max-width:1024px) {}
+@media (max-width:960px) {
+    .reservation .art_wrap article{
+        display: none;
+    }
+    .reservation .art_wrap article.active{
+        display: flex;
+    }
+}
+@media (max-width:768px) {}
+@media (max-width:600px) {}
+@media (max-width:480px) {
+    .reservation .art_wrap article{
+        height: auto;
+    }
+    .reservation .art_wrap .step1 .invisible ul li .num_wrap{
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .reservation .art_wrap .step1 .invisible ul li .num_wrap > div{
+        width: 100%;
+    }
+}
+@media (max-width:320px) {}

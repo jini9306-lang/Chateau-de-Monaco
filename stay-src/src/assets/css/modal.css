@@ -1,0 +1,27 @@
+.stay_modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+}
+.modal_panel{
+    background: var(--mainBg_color);
+    border: 1px solid var(--fontSub200);
+    border-radius: 0.5rem;
+    max-width: 1000px;
+    width: 90%;
+    max-height: 80vh;
+    /* overflow-y: auto; */
+    position: relative;
+    z-index: 350;
+}
+.modal_clos{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+

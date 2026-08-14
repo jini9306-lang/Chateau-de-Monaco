@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img, video{
+    width: 100%;
+    display: block;
+}
+dl,ul,li,ol,menu{
+    list-style: none;
+}
+em,address{
+    font-style: normal;
+}
+button{
+    border: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.container{
+    width: 1400px;
+    margin: 0 auto;
+    /* padding: 0 10px; */
+    position: relative;
+}
+.h2_en{
+    font-family: var(--titleFontEg);
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: var(--fontSub100);
+}
+.h2_ko{
+    font-family: var(--titleFontKo);
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--fontSub100);
+}
+.h3_en{
+    font-family: var(--titleFontEg);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.h3_ko{
+    font-family: var(--titleFontKo);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.h4_en{
+    font-family: var(--mainFontEn);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.h4_ko{
+    font-family: var(--mainFontKo);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.text_en{
+    font-family: var(--mainFontEn);
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+.text_ko{
+    font-family: var(--mainFontKo);
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+/* 버튼_대 */
+.btn_big{
+    display: inline-block;
+    background-color: var(--mainBg_color);
+    border: 1px solid var(--fontSub200);
+    color: var(--fontSub200);
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn_big:hover{
+    background-color: var(--fontSub200);
+    color: var(--mainBg_color);
+}
+/* 버튼_소 */
+.btn_small{
+    display: inline-block;
+    background-color: var(--mainBg_color);
+    border: 1px solid var(--fontSub200);
+    color: var(--fontSub200);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+.btn_small:hover{
+    background-color: var(--fontSub200);
+    color: var(--mainBg_color);
+}
+
+@media(max-width:1400px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+

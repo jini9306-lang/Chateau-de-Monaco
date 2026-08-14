@@ -1,0 +1,158 @@
+/* footer */
+#footer{
+    width: 100%;
+    background-color: var(--footerBg_color);
+}
+.footer{
+    padding: 2rem 0;
+}
+.footer_up{
+    width: 85%;
+    height: inherit;
+    justify-content:space-between;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 1.2rem;
+}
+.footer_up h4{
+    padding-bottom: 20px;
+    text-align: center;
+    color: var(--mainBg_color);
+}
+.list{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.list > a{
+    padding-bottom: 0.5rem;
+    color: var(--mainBg_color);
+}
+.list > a:last-child{
+    padding-bottom: 0;
+}
+.list > a span{
+    position: relative;
+    display: inline-block;
+}
+.list > a span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.list > a:hover span::after{
+    transform: scaleX(1);
+}
+
+
+
+.footer_down{
+    border-top: 1px solid var(--mainBg_color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+}
+.down_left{}
+.down_left span{
+    flex-direction: column;
+    display: flex;
+    color: var(--mainBg_color);
+}
+.info{
+    padding-bottom: 0.5rem;
+}
+.mail{}
+
+.f_logo > img{
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    cursor: pointer;
+}
+
+.down_right{
+    text-align: right;
+}
+
+.down_right .other{
+    padding-bottom: 0.5rem;
+}
+.down_right .other > a{
+    color: var(--mainBg_color);
+    padding-left: 1rem;
+}
+.down_right .other > a:last-child{
+    padding-right: none;
+}
+.down_right > p{
+    color: var(--mainBg_color);
+}
+
+
+@media(max-width:1400px) {
+    /* footer */
+    .f_logo > img{
+        width: 180px;
+        height: 90px;
+    }
+}
+@media(max-width:1024px) {}
+@media(max-width:960px) {
+    /* footer */
+    .footer_up {
+        display: none;
+    }
+
+    .footer_down {
+        border: none;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .footer_down .f_logo {
+        order: 1;
+        /* 로고를 맨 위로 */
+    }
+
+    .f_logo>img {
+        width: 150px;
+        height: 80px;
+    }
+
+    .footer_down .down_left {
+        order: 2;
+        /* 주소, 이메일을 두 번째로 */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer_down .down_right {
+        order: 3;
+        /* 약관, 카피라이트를 마지막으로 */
+        text-align: center;
+
+    }
+
+    .down_left {
+        position: relative;
+    }
+}
+@media(max-width:768px) {}
+@media(max-width:600px) {
+    .f_logo>img {
+        width: 120px;
+        height: 60px;
+    }
+}
+@media(max-width:480px) {}
+@media(max-width:320px) {}

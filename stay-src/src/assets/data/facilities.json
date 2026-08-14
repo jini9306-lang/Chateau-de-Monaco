@@ -1,0 +1,136 @@
+{
+  "facilities": [
+    {
+      "id": "art-gallery",
+      "type": "facility",
+      "title": "ART GALLERY",
+      "button": "GALLERY",
+      "tagline": "Where Art Meets Hospitality",
+      "image": "img/gallery.png",
+      "primaryLabel": "Highlights",
+      "primaryItems": [
+        "Curated Collection",
+        "Seasonal Exhibition",
+        "Sculpture Hall",
+        "Gallery Lounge"
+      ],
+      "secondaryLabel": "운영시간",
+      "secondaryItems": [
+        "09:00 - 20:00"
+      ],
+      "description": "호텔 곳곳에는 엄선된 회화와 조각 작품이 전시되어 있습니다. 머무는 동안 하나의 갤러리를 거니는 듯한 특별한 경험을 선사합니다."
+    },
+    {
+      "id": "infinity-pool",
+      "type": "facility",
+      "title": "INFINITY POOL",
+      "button": "POOL",
+      "tagline": "A Boundless View",
+      "image": "img/pool.png",
+      "primaryLabel": "Highlights",
+      "primaryItems": [
+        "Infinity Ocean View",
+        "Private Cabana",
+        "Heated Pool",
+        "Pool Bar Service"
+      ],
+      "secondaryLabel": "운영시간",
+      "secondaryItems": [
+        "08:00 - 21:00"
+      ],
+      "description": "하늘과 바다가 하나로 이어지는 인피니티 풀에서 평온한 휴식을 경험해 보세요. 맑은 바다를 바라보며 여유로운 시간을 보내고, 프라이빗 카바나에서 최고의 휴양을 즐길 수 있습니다."
+    },
+    {
+      "id": "signature-restaurant",
+      "type": "facility",
+      "title": "SIGNATURE RESTAURANT",
+      "button": "RESTAURANT",
+      "tagline": "Fine Dining by the Sea",
+      "image": "img/restaurant.png",
+      "primaryLabel": "Highlights",
+      "primaryItems": [
+        "Breakfast Buffet",
+        "Signature Course",
+        "Ocean Terrace",
+        "Wine Pairing"
+      ],
+      "secondaryLabel": "운영시간",
+      "secondaryItems": [
+        "Breakfast 07:00 - 10:00",
+        "Lunch 12:00 - 15:00",
+        "Dinner 18:00 - 22:00"
+      ],
+      "description": "현지 식재료와 계절의 풍미를 담은 코스 요리를 아름다운 오션뷰와 함께 제공합니다. 아침부터 저녁까지 품격 있는 다이닝을 경험해 보세요."
+    },
+    {
+      "id": "spa-wellness",
+      "type": "facility",
+      "title": "SPA & WELLNESS",
+      "button": "SPA",
+      "tagline": "A Moment of Serenity",
+      "image": "img/spa.png",
+      "primaryLabel": "Highlights",
+      "primaryItems": [
+        "Aroma Therapy",
+        "Marble Jacuzzi",
+        "Steam Sauna",
+        "Relaxation Lounge"
+      ],
+      "secondaryLabel": "운영시간",
+      "secondaryItems": [
+        "10:00 - 22:00"
+      ],
+      "description": "은은한 향과 따뜻한 조명 속에서 몸과 마음의 균형을 되찾는 웰니스 프로그램을 제공합니다. 숙련된 테라피스트의 맞춤 케어를 경험해 보세요."
+    },
+    {
+      "id": "standard-room",
+      "type": "room",
+      "title": "STANDARD ROOM",
+      "button": "STANDARD",
+      "tagline": "Classic Comfort",
+      "image": "img/standard.png",
+      "primaryLabel": "Room Information",
+      "primaryItems": [
+        "35㎡",
+        "Garden View",
+        "King Bed / Twin Bed",
+        "Rain Shower",
+        "High-speed Wi-Fi"
+      ],
+      "secondaryLabel": "Amenities",
+      "secondaryItems": [
+        "Smart TV",
+        "Coffee Machine",
+        "Mini Bar",
+        "Bath Amenities",
+        "Safe Box"
+      ],
+      "description": "절제된 클래식 디자인과 자연광이 어우러진 객실입니다. 아늑한 공간에서 편안한 휴식을 즐길 수 있습니다."
+    },
+    {
+      "id": "suite-room",
+      "type": "room",
+      "title": "SUITE ROOM",
+      "button": "SUITE",
+      "tagline": "Timeless Luxury",
+      "image": "img/sweet.png",
+      "primaryLabel": "Room Information",
+      "primaryItems": [
+        "70㎡",
+        "Ocean View",
+        "Separate Living Room",
+        "Marble Bathroom",
+        "Walk-in Closet"
+      ],
+      "secondaryLabel": "Amenities",
+      "secondaryItems": [
+        "Espresso Machine",
+        "Premium Mini Bar",
+        "Luxury Bath Collection",
+        "Bluetooth Speaker",
+        "Concierge Service"
+      ],
+      "description": "넓은 거실과 침실이 분리된 스위트 객실입니다. 탁 트인 오션뷰와 프라이빗한 공간에서 최상의 휴식을 경험할 수 있습니다."
+    }
+  ]
+}
