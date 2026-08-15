@@ -322,6 +322,22 @@
             }
         }
 
+        // 수정
+        const params = new URLSearchParams(window.location.search);
+        const targetId = params.get('item');
+        if (targetId) {
+            const targetIndex = cards.findIndex(function (card) {
+                return card.querySelector('#' + targetId);
+            });
+            if (targetIndex !== -1) {
+                const rotateCount = ((2 - targetIndex) % cards.length + cards.length) % cards.length;
+                for (let i = 0; i < rotateCount; i++) {
+                    const lastCard = cards.pop();
+                    cards.unshift(lastCard);
+                }
+            }
+        }
+
         // 처음 카드 위치 배치
         arrangeCards(true);
 

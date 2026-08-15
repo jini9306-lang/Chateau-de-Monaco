@@ -28,13 +28,13 @@ const Footer = () => {
                     <a href="/Chateau-de-Monaco/stay/index.html">
                         <h4 class="h4_ko">STAY</h4>
                     </a>
-                    <div class="list 1">
-                        <a href="/Chateau-de-Monaco/stay/index.html#gallery" class="text_ko"><span>갤러리</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#pool" class="text_ko"><span>수영장</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#restaurant" class="text_ko"><span>레스토랑</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#spa" class="text_ko"><span>스파</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#standard" class="text_ko"><span>스탠다드 룸</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html#suite" class="text_ko"><span>스위트 룸</span></a>
+                    <div className="list 1">
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=gallery" className="text_ko" onClick={(e) => handleAnchorClick(e, 'gallery')}><span>갤러리</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=pool" className="text_ko" onClick={(e) => handleAnchorClick(e, 'pool')}><span>수영장</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=restaurant" className="text_ko" onClick={(e) => handleAnchorClick(e, 'restaurant')}><span>레스토랑</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=spa" className="text_ko" onClick={(e) => handleAnchorClick(e, 'spa')}><span>스파</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=standard" className="text_ko" onClick={(e) => handleAnchorClick(e, 'standard')}><span>스탠다드 룸</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=suite" className="text_ko" onClick={(e) => handleAnchorClick(e, 'suite')}><span>스위트 룸</span></a>
                     </div>
                 </article>
                 <article id="experiences">
