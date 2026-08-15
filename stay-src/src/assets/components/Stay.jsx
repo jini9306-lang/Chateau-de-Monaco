@@ -57,14 +57,14 @@ const Stay = () => {
 }, [])
 
   return (
-    <section className="stay_pc" id='stay_pc'>
+    <section id='stay_pc'>
       <div className="container">
         <section className='stay_pc'>
           <div className="door_wrap">
-          <div className={`door ${isOpen ? 'open' : ''}`}>
-            <div className="left_door"></div>
-            <div className="rigth_door"></div>
-          </div>
+            <div className={`door ${isOpen ? 'open' : ''}`}>
+              <div className="left_door"></div>
+              <div className="rigth_door"></div>
+            </div>
           </div>
 
           <div

@@ -3,81 +3,60 @@ import React from 'react'
 import '../css/footer.css'
 
 const Footer = () => {
-
-    const handleAnchorClick = (e, path, id) => {
-        if (window.innerWidth <= 960) {
-            const target = document.getElementById(id)
-
-            if (target) {
-                e.preventDefault()
-
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                })
-            }
-        }
-    }
+    
+    
 
   return (
     <footer id="footer">
-    <div class="container">
-        <footer class="footer">
-            <div class="footer_up">
+    <div className="container">
+        <footer className="footer">
+            <div className="footer_up">
                 <article id="stay">
-                    <a href="/Chateau-de-Monaco/stay/index.html">
-                        <h4 class="h4_ko">STAY</h4>
-                    </a>
+                    <h4 className="h4_ko">STAY</h4>
                     <div className="list 1">
-                        <a href="/Chateau-de-Monaco/stay/index.html?item=gallery" className="text_ko" onClick={(e) => handleAnchorClick(e, 'gallery')}><span>갤러리</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html?item=pool" className="text_ko" onClick={(e) => handleAnchorClick(e, 'pool')}><span>수영장</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html?item=restaurant" className="text_ko" onClick={(e) => handleAnchorClick(e, 'restaurant')}><span>레스토랑</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html?item=spa" className="text_ko" onClick={(e) => handleAnchorClick(e, 'spa')}><span>스파</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html?item=standard" className="text_ko" onClick={(e) => handleAnchorClick(e, 'standard')}><span>스탠다드 룸</span></a>
-                        <a href="/Chateau-de-Monaco/stay/index.html?item=suite" className="text_ko" onClick={(e) => handleAnchorClick(e, 'suite')}><span>스위트 룸</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=art-gallery" className="text_ko"><span>갤러리</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=infinity-pool" className="text_ko"><span>수영장</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=signature-restaurant" className="text_ko" ><span>레스토랑</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=spa-wellness" className="text_ko"><span>스파</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=standard-room" className="text_ko"><span>스탠다드 룸</span></a>
+                        <a href="/Chateau-de-Monaco/stay/index.html?item=suite-room" className="text_ko"><span>스위트 룸</span></a>
                     </div>
                 </article>
                 <article id="experiences">
-                    <a href="/Chateau-de-Monaco/experiences/index.html">
-                        <h4 class="h4_ko">EXPERIENCES</h4>
-                    </a>
-                    <div class="list 2">
-                        <a href="/Chateau-de-Monaco/experiences/index.html?item=birthday" class="text_ko"><span>생일</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html?item=spa" class="text_ko"><span>스파</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html?item=proposal" class="text_ko"><span>프로포즈</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html?item=anniversary" class="text_ko"><span>기념일</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html?item=honeymoon" class="text_ko"><span>허니문</span></a>
+                    <h4 className="h4_ko">EXPERIENCES</h4>
+                    <div className="list 2">
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=birthday" className="text_ko"><span>생일</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=spa" className="text_ko"><span>스파</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=proposal" className="text_ko"><span>프로포즈</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=anniversary" className="text_ko"><span>기념일</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=honeymoon" className="text_ko"><span>허니문</span></a>
                     </div>
                 </article>
                 <article id="location">
-                    <a href="/Chateau-de-Monaco/location/index.html">
-                        <h4 class="h4_ko">LOCATION</h4>
-                    </a>
-                    <div class="list 3">
-                        <a href="/Chateau-de-Monaco/location/index.html#directions" class="text_ko"><span>오시는 길</span></a>
-                        <a href="/Chateau-de-Monaco/location/index.html#spot" class="text_ko"><span>주요 명소</span></a>
-                        <a href="/Chateau-de-Monaco/location/index.html#map" class="text_ko"><span>지도</span></a>
+                    <h4 className="h4_ko">LOCATION</h4>
+                    <div className="list 3">
+                        <a href="/Chateau-de-Monaco/location/index.html#directions" className="text_ko"><span>오시는 길</span></a>
+                        <a href="/Chateau-de-Monaco/location/index.html#spot" className="text_ko"><span>주요 명소</span></a>
+                        <a href="/Chateau-de-Monaco/location/index.html#map" className="text_ko"><span>지도</span></a>
                     </div>
                 </article>
                 <article id="reservation">
-                    <a href="/Chateau-de-Monaco/reservation/index.html">
-                        <h4 class="h4_ko">RESERVATION</h4>
-                    </a>
-                    <div class="list 4">
+                    <h4 className="h4_ko">RESERVATION</h4>
+                    <div className="list 4">
                         <a href="/Chateau-de-Monaco/reservation/index.html" class="text_ko"><span>객실 예약</span></a>
                     </div>
                 </article>
             </div>
-            <div class="footer_down">
-                <div class="down_left">
-                    <span class="info text_en">
+            <div className="footer_down">
+                <div className="down_left">
+                    <span className="info text_en">
                         Place du Casino, 98000 Monte-Carlo, Monaco
                     </span>
-                    <span class="mail text_en">
+                    <span className="mail text_en">
                         chateau.reserve@monaco.com
                     </span>
                 </div>
-                <a class="f_logo" href="/Chateau-de-Monaco/index.html"><img src={`${import.meta.env.BASE_URL}img/logo_white.png`} alt="로고_이미지" /></a>
+                <a className="f_logo" href="/Chateau-de-Monaco/index.html"><img src={`${import.meta.env.BASE_URL}img/logo_white.png`} alt="로고_이미지" /></a>
                     <div className="down_right">
                         <div className="other text_ko">
                             <a href="#">개인정보처리방침</a>

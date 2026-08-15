@@ -9,7 +9,7 @@
     z-index: 30;
 }
 
-.stay_pc .container{
+#stay_pc .container{
     width: 63%;
     height: 81.8vh;
     overflow: hidden;

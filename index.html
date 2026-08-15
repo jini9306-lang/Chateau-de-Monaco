@@ -373,161 +373,165 @@
         // ScrollTrigger 플러그인 등록
         gsap.registerPlugin(ScrollTrigger);
 
-        // main3 요소 선택
-        const main3 = document.querySelector('.main3');
-        const main3Wrap = document.querySelector('.main3_wrap');
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 961px)", () => {
+
+            // main3 요소 선택
+            const main3 = document.querySelector('.main3');
+            const main3Wrap = document.querySelector('.main3_wrap');
 
 
-        // main3 텍스트 등장 효과
+            // main3 텍스트 등장 효과
 
-        gsap.fromTo(
-            ".main3_left, .main3_right",
-            {
-                opacity: 0,
-                y: 30
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "power2.out",
+            gsap.fromTo(
+                ".main3_left, .main3_right",
+                {
+                    opacity: 0,
+                    y: 30
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
 
+                    scrollTrigger: {
+                        trigger: ".main3",
+                        start: "top 70%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+
+            // 1~4번 이미지 순차 등장 효과
+            gsap.timeline({
                 scrollTrigger: {
                     trigger: ".main3",
                     start: "top 70%",
                     toggleActions: "play none none reverse"
                 }
-            }
-        );
-
-        // 1~4번 이미지 순차 등장 효과
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".main3",
-                start: "top 70%",
-                toggleActions: "play none none reverse"
-            }
-        })
-            .from(".main3_img1", {
-                autoAlpha: 0,
-                y: -15,
-                clipPath: "inset(0 100% 0 0)",
-                duration: 0.9,
-                ease: "power3.out"
             })
+                .from(".main3_img1", {
+                    autoAlpha: 0,
+                    y: -15,
+                    clipPath: "inset(0 100% 0 0)",
+                    duration: 0.9,
+                    ease: "power3.out"
+                })
 
-            .from(".main3_img2", {
-                autoAlpha: 0,
-                y: -15,
-                clipPath: "inset(0 100% 0 0)",
-                duration: 0.9,
-                ease: "power3.out"
-            }, "-=0.15")
+                .from(".main3_img2", {
+                    autoAlpha: 0,
+                    y: -15,
+                    clipPath: "inset(0 100% 0 0)",
+                    duration: 0.9,
+                    ease: "power3.out"
+                }, "-=0.15")
 
-            .from(".main3_img3", {
-                autoAlpha: 0,
-                y: -15,
-                clipPath: "inset(0 100% 0 0)",
-                duration: 0.9,
-                ease: "power3.out"
-            }, "-=0.15")
+                .from(".main3_img3", {
+                    autoAlpha: 0,
+                    y: -15,
+                    clipPath: "inset(0 100% 0 0)",
+                    duration: 0.9,
+                    ease: "power3.out"
+                }, "-=0.15")
 
-            .from(".main3_img4", {
-                autoAlpha: 0,
-                y: -15,
-                clipPath: "inset(0 100% 0 0)",
-                duration: 0.9,
-                ease: "power3.out"
-            }, "-=0.15");
+                .from(".main3_img4", {
+                    autoAlpha: 0,
+                    y: -15,
+                    clipPath: "inset(0 100% 0 0)",
+                    duration: 0.9,
+                    ease: "power3.out"
+                }, "-=0.15");
 
-        // 가로 스크롤 구현
-        const horizontalScroll = gsap.to(main3Wrap, {
-            x: () => -(main3Wrap.scrollWidth - window.innerWidth),
-            ease: "none",
+            // 가로 스크롤 구현
+            const horizontalScroll = gsap.to(main3Wrap, {
+                x: () => -(main3Wrap.scrollWidth - window.innerWidth),
+                ease: "none",
 
-            scrollTrigger: {
-                trigger: main3,
-                start: "top top",
-                end: () => "+=" + (main3Wrap.scrollWidth - window.innerWidth),
-                pin: true,
-                scrub: 0.6,
-                invalidateOnRefresh: true,
-                anticipatePin: 1
-            }
-        });
-
-
-        // 5~10번 이미지 Reveal 효과
-        gsap.utils.toArray(
-            ".main3_img5, .main3_img6, .main3_img7, .main3_img8, .main3_img9, .main3_img10"
-        ).forEach((item) => {
-
-            const image = item.querySelector("img");
-
-            // 기본값 (7~10)
-            let start = "left 100%";
-            let end = "left 60%";
-            let scrub = 0.8;
-
-            // 5~6번은 조금 더 여유롭게
-            if (
-                item.classList.contains("main3_img5") ||
-                item.classList.contains("main3_img6")
-            ) {
-                start = "left 95%";
-                end = "left 45%";
-                scrub = 1.2;
-            }
-
-            gsap.timeline({
                 scrollTrigger: {
-                    trigger: item,
-                    containerAnimation: horizontalScroll,
-                    start: start,
-                    end: end,
-                    scrub: scrub,
-                    invalidateOnRefresh: true
+                    trigger: main3,
+                    start: "top top",
+                    end: () => "+=" + (main3Wrap.scrollWidth - window.innerWidth),
+                    pin: true,
+                    scrub: 0.6,
+                    invalidateOnRefresh: true,
+                    anticipatePin: 1
                 }
-            })
+            });
 
-                // 왼쪽 → 오른쪽 Reveal
-                .fromTo(
-                    item,
-                    {
-                        autoAlpha: 0,
-                        clipPath: "inset(0 100% 0 0)"
-                    },
-                    {
-                        autoAlpha: 1,
-                        clipPath: "inset(0 0% 0 0)",
-                        ease: "none"
-                    },
-                    0
-                )
 
-                // 살짝 확대된 상태에서 원래 크기로
-                .fromTo(
-                    image,
-                    {
-                        scale: 1.08,
-                        xPercent: -3
-                    },
-                    {
-                        scale: 1,
-                        xPercent: 0,
-                        ease: "none"
-                    },
-                    0
-                );
+            // 5~10번 이미지 Reveal 효과
+            gsap.utils.toArray(
+                ".main3_img5, .main3_img6, .main3_img7, .main3_img8, .main3_img9, .main3_img10"
+            ).forEach((item) => {
 
+                const image = item.querySelector("img");
+
+                // 기본값 (7~10)
+                let start = "left 100%";
+                let end = "left 60%";
+                let scrub = 0.8;
+
+                // 5~6번은 조금 더 여유롭게
+                if (
+                    item.classList.contains("main3_img5") ||
+                    item.classList.contains("main3_img6")
+                ) {
+                    start = "left 95%";
+                    end = "left 45%";
+                    scrub = 1.2;
+                }
+
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: item,
+                        containerAnimation: horizontalScroll,
+                        start: start,
+                        end: end,
+                        scrub: scrub,
+                        invalidateOnRefresh: true
+                    }
+                })
+
+                    // 왼쪽 → 오른쪽 Reveal
+                    .fromTo(
+                        item,
+                        {
+                            autoAlpha: 0,
+                            clipPath: "inset(0 100% 0 0)"
+                        },
+                        {
+                            autoAlpha: 1,
+                            clipPath: "inset(0 0% 0 0)",
+                            ease: "none"
+                        },
+                        0
+                    )
+
+                    // 살짝 확대된 상태에서 원래 크기로
+                    .fromTo(
+                        image,
+                        {
+                            scale: 1.08,
+                            xPercent: -3
+                        },
+                        {
+                            scale: 1,
+                            xPercent: 0,
+                            ease: "none"
+                        },
+                        0
+                    );
+
+            });
+
+
+            // 이미지 로딩 후 위치 재계산
+            window.addEventListener("load", function () {
+                ScrollTrigger.refresh();
+            });
         });
-
-
-        // 이미지 로딩 후 위치 재계산
-        window.addEventListener("load", function () {
-            ScrollTrigger.refresh();
-        });
-
     </script>
 </body>
 
