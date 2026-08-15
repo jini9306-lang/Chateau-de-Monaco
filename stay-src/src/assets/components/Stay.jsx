@@ -42,9 +42,14 @@ const Stay = () => {
   useEffect(() => {
   const params = new URLSearchParams(window.location.search)
   const targetId = params.get('item')
+  console.log('URL 쿼리:', window.location.search)
+  console.log('targetId:', targetId)
+  console.log('facilities ids:', facilities.map(f => f.id))
+
   if (!targetId) return
 
   const match = facilities.find((item) => item.id === targetId)
+  console.log('match:', match)
   if (match) {
     setActiveId(match.id)
     setIsOpen(true)
