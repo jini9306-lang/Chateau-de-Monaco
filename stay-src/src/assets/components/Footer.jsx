@@ -1,10 +1,39 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 
 import '../css/footer.css'
 
 const Footer = () => {
+    const [footerModal, setFooterModal] = useState(null)
+    const videoRef = useRef(null)
     
-    
+    // 개인정보처리방침
+    const openPrivacy = () => {
+        setFooterModal("privacy")
+
+        setTimeout(() => {
+            if (videoRef.current) {
+                videoRef.current.currentTime = 0
+                videoRef.current.play()
+            }
+        }, 0)
+    }
+
+
+    // 이용약관 / 쿠키정책 / 사이트맵
+    const openNotice = () => {
+        setFooterModal("notice")
+    }
+
+
+    // 모달 닫기
+    const closeFooterModal = () => {
+        if (videoRef.current) {
+            videoRef.current.pause()
+            videoRef.current.currentTime = 0
+        }
+
+        setFooterModal(null)
+    }
 
   return (
     <footer id="footer">
@@ -43,7 +72,7 @@ const Footer = () => {
                 <article id="reservation">
                     <h4 className="h4_ko">RESERVATION</h4>
                     <div className="list 4">
-                        <a href="/Chateau-de-Monaco/reservation/index.html" class="text_ko"><span>객실 예약</span></a>
+                        <a href="/Chateau-de-Monaco/reservation/index.html" className="text_ko"><span>객실 예약</span></a>
                     </div>
                 </article>
             </div>
@@ -59,10 +88,21 @@ const Footer = () => {
                 <a className="f_logo" href="/Chateau-de-Monaco/index.html"><img src={`${import.meta.env.BASE_URL}img/logo_white.png`} alt="로고_이미지" /></a>
                     <div className="down_right">
                         <div className="other text_ko">
-                            <a href="#">개인정보처리방침</a>
-                            <a href="#">이용약관</a>
-                            <a href="#">쿠키정책</a>
-                            <a href="#">사이트맵</a>
+                            <a href="#" onClick={openPrivacy}>
+                                개인정보처리방침
+                            </a>
+
+                            <a href="#" onClick={openNotice}>
+                                이용약관
+                            </a>
+
+                            <a href="#" onClick={openNotice}>
+                                쿠키정책
+                            </a>
+
+                            <a href="#" onClick={openNotice}>
+                                사이트맵
+                            </a>
                         </div>
                         <p className="text_en">© 2026 Château de Monaco. All Rights Reserved.</p>
                     </div>
@@ -70,6 +110,57 @@ const Footer = () => {
             </footer>
 
         </div>
+
+        {footerModal && (
+            <div className="footer_modal active">
+
+                {/* 배경 */}
+                <div
+                    className="footer_modal_bg"
+                    onClick={closeFooterModal}
+                ></div>
+
+
+                <div className="footer_modal_content">
+
+                    {/* 닫기 버튼 */}
+                    <button
+                        type="button"
+                        className="footer_modal_close btn_small"
+                        onClick={closeFooterModal}
+                    >
+                        ×
+                    </button>
+
+
+                    {/* 개인정보처리방침 */}
+                    {footerModal === "privacy" && (
+                        <div className="footer_video">
+                            <video
+                                ref={videoRef}
+                                controls
+                            >
+                                <source
+                                    src={`${import.meta.env.BASE_URL}img/personal_information.mp4`}
+                                    type="video/mp4"
+                                />
+
+                                브라우저에서 동영상을 재생할 수 없습니다.
+                            </video>
+                        </div>
+                    )}
+
+
+                    {/* 이용약관 / 쿠키정책 / 사이트맵 */}
+                    {footerModal === "notice" && (
+                        <p className="footer_notice_text h4_ko">
+                            포트폴리오용 웹페이지 입니다.
+                        </p>
+                    )}
+
+                </div>
+            </div>
+        )}
     </footer>
   )
 }

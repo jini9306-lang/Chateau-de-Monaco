@@ -282,6 +282,62 @@
             });
         });
 
+        // footer 모달
+        $(document).on('click', '.footer_privacy', function (e) {
+            e.preventDefault();
+
+            $('#footerModal').addClass('active');
+
+            // 영상 모달
+            $('.footer_video').show();
+            $('.footer_notice_text').hide();
+
+            // 영상 처음부터 재생
+            const video = $('.footer_video video')[0];
+
+            if (video) {
+                video.currentTime = 0;
+                video.play();
+            }
+        });
+
+
+        // 이용약관 / 쿠키정책 / 사이트맵
+        $(document).on('click', '.footer_notice', function (e) {
+            e.preventDefault();
+
+            $('#footerModal').addClass('active');
+
+            // 안내 문구 모달
+            $('.footer_video').hide();
+            $('.footer_notice_text').show();
+        });
+
+
+        // 닫기 버튼
+        $(document).on('click', '.footer_modal_close', function () {
+            closeFooterModal();
+        });
+
+
+        // 배경 클릭하면 닫기
+        $(document).on('click', '.footer_modal_bg', function () {
+            closeFooterModal();
+        });
+
+
+        // 모달 닫기 함수
+        function closeFooterModal() {
+            $('#footerModal').removeClass('active');
+
+            const video = $('.footer_video video')[0];
+
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        }
+
         // 권장 화면 안내 모달
         $('.res_btn').on('click', function () {
             $('#resolutionModal').fadeOut(500);
