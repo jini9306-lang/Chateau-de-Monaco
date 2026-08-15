@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/Chateau-de-Monaco/css/font.css">
     <link rel="stylesheet" href="/Chateau-de-Monaco/css/vars.css">
     <link rel="stylesheet" href="/Chateau-de-Monaco/css/common.css">
@@ -18,11 +19,30 @@
 </head>
 
 <body data-logo="white">
+    <!-- 인트로 로딩 -->
     <div id="siteIntro">
         <div class="intro__lockup">
             <p class="intro__eyebrow">Château de</p>
             <div class="intro__bar"><div id="introBarFill"></div></div>
             <h1 class="intro__title">Monaco</h1>
+        </div>
+    </div>
+
+    <!-- 권장해상도 안내 모달 -->
+    <div id="resolutionModal">
+        <div class="resolution_modal_inner">
+            <p class="resolution_eyebrow h3_en">CHÂTEAU DE MONACO</p>
+
+            <h2 class="h2_ko">권장 화면 안내</h2>
+
+            <p class="resolution_desc h4_ko">
+                본 사이트는<br>
+                <strong>1920 × 1080</strong> 해상도에 최적화되어 있습니다.
+            </p>
+
+            <button type="button" class="res_btn btn_big">
+                확인
+            </button>
         </div>
     </div>
 
@@ -50,89 +70,176 @@
     <section id="contents">
         <section class="main3">
             <div class="main3_wrap">
-                <article class="main3_left">
-                    <h2 class="h3_en">Beyond the Horizon.</h2>
-                    <div class="main3_text1_1 main3_desc">
-                        <p class="text_en">Wake with the sunrise.</p>
-                        <p class="text_en">Dine above the sea.</p>
-                        <p class="text_en">Sail the horizon.</p>
-                        <p class="text_en">Mediterranean.</p>
+                
+                
+                <!-- pc용 슬라이드 -->
+                <div class="main3_pc">
+                    <article class="main3_left">
+                        <h2 class="h3_en">Beyond the Horizon.</h2>
+                        <div class="main3_text1_1 main3_desc">
+                            <p class="text_en">Wake with the sunrise.</p>
+                            <p class="text_en">Dine above the sea.</p>
+                            <p class="text_en">Sail the horizon.</p>
+                            <p class="text_en">Mediterranean.</p>
+                        </div>
+
+                        <div class="main3_text1_2 main3_desc">
+                            <p class="text_en">A timeless escape,</p>
+                            <p class="text_en">crafted for those who seek</p>
+                            <p class="text_en">quiet luxury.</p>
+                        </div>
+                    </article> <!-- .main3_left -->
+
+                    <figure class="main3_img main3_img1">
+                        <img src="/Chateau-de-Monaco/img/main3_1.png" alt="호텔 전망">
+                    </figure>
+
+                    <figure class="main3_img main3_img2">
+                        <img src="/Chateau-de-Monaco/img/main3_2.png" alt="호텔 조식">
+                    </figure>
+
+                    <figure class="main3_img main3_img3">
+                        <img src="/Chateau-de-Monaco/img/main3_3.png" alt="호텔 외관">
+                    </figure>
+
+                    <figure class="main3_img main3_img4">
+                        <img src="/Chateau-de-Monaco/img/main3_4.png" alt="호텔 계단">
+                    </figure>
+
+                    <figure class="main3_img main3_img5">
+                        <img src="/Chateau-de-Monaco/img/main3_5.png" alt="호텔 가든">
+                    </figure>
+
+                    <figure class="main3_img main3_img6">
+                        <img src="/Chateau-de-Monaco/img/main3_6.png" alt="호텔 선셋">
+                    </figure>
+
+                    <figure class="main3_img main3_img7">
+                        <img src="/Chateau-de-Monaco/img/main3_7.png" alt="와인">
+                    </figure>
+
+                    <figure class="main3_img main3_img8">
+                        <img src="/Chateau-de-Monaco/img/main3_8.png" alt="불꽃놀이">
+                    </figure>
+
+                    <figure class="main3_img main3_img9">
+                        <img src="/Chateau-de-Monaco/img/main3_9.png" alt="불꽃놀이">
+                    </figure>
+
+                    <figure class="main3_img main3_img10">
+                        <img src="/Chateau-de-Monaco/img/main3_10.png" alt="불꽃놀이">
+                    </figure>
+
+                    <article class="main3_right">
+
+                        <h2 class="h3_en">
+                            Under the Sky.
+                        </h2>
+
+                        <div class="main3_text2_1 main3_desc">
+                            <p class="text_en">Private yachts.</p>
+                            <p class="text_en">Golden lights.</p>
+                            <p class="text_en">Fireworks above the sea.</p>
+                        </div>
+
+                        <div class="main3_text2_2 main3_desc">
+                            <p class="text_en">
+                                Every celebration
+                            </p>
+
+                            <p class="text_en">
+                                becomes a memory
+                            </p>
+
+                            <p class="text_en">
+                                to cherish.
+                            </p>
+                        </div> <!-- .main3_desc -->
+
+                    </article> <!-- .main3_right -->
+                </div>
+
+                <!-- 모바일용 슬라이드 -->
+                <div class="main3_swiper">
+                    <div class="swiper-wrapper">
+                        <article class="swiper-slide main3_left">
+                            <h2 class="h3_en">Beyond the Horizon.</h2>
+                            <div class="main3_text1_1 main3_desc">
+                                <p class="text_en">Wake with the sunrise.</p>
+                                <p class="text_en">Dine above the sea.</p>
+                                <p class="text_en">Sail the horizon.</p>
+                                <p class="text_en">Mediterranean.</p>
+                            </div>
+
+                            <div class="main3_text1_2 main3_desc">
+                                <p class="text_en">A timeless escape,</p>
+                                <p class="text_en">crafted for those who seek</p>
+                                <p class="text_en">quiet luxury.</p>
+                            </div>
+                        </article> <!-- .main3_left -->
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_1.png" alt="호텔 전망">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_2.png" alt="호텔 조식">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_4.png" alt="호텔 계단">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_5.png" alt="호텔 가든">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_6.png" alt="호텔 선셋">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_7.png" alt="와인">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_9.png" alt="불꽃놀이">
+                        </figure>
+
+                        <figure class="swiper-slide">
+                            <img src="/Chateau-de-Monaco/img/main3_10.png" alt="불꽃놀이">
+                        </figure>
+
+                        <article class="swiper-slide main3_right">
+
+                            <h2 class="h3_en">
+                                Under the Sky.
+                            </h2>
+
+                            <div class="main3_text2_1 main3_desc">
+                                <p class="text_en">Private yachts.</p>
+                                <p class="text_en">Golden lights.</p>
+                                <p class="text_en">Fireworks above the sea.</p>
+                            </div>
+
+                            <div class="main3_text2_2 main3_desc">
+                                <p class="text_en">
+                                    Every celebration
+                                </p>
+
+                                <p class="text_en">
+                                    becomes a memory
+                                </p>
+
+                                <p class="text_en">
+                                    to cherish.
+                                </p>
+                            </div> <!-- .main3_desc -->
+
+                        </article> <!-- .main3_right -->
+
                     </div>
-
-                    <div class="main3_text1_2 main3_desc">
-                        <p class="text_en">A timeless escape,</p>
-                        <p class="text_en">crafted for those who seek</p>
-                        <p class="text_en">quiet luxury.</p>
-                    </div>
-                </article> <!-- .main3_left -->
-
-                <figure class="main3_img main3_img1">
-                    <img src="/Chateau-de-Monaco/img/main3_1.png" alt="호텔 전망">
-                </figure>
-
-                <figure class="main3_img main3_img2">
-                    <img src="/Chateau-de-Monaco/img/main3_2.png" alt="호텔 조식">
-                </figure>
-
-                <figure class="main3_img main3_img3">
-                    <img src="/Chateau-de-Monaco/img/main3_3.png" alt="호텔 외관">
-                </figure>
-
-                <figure class="main3_img main3_img4">
-                    <img src="/Chateau-de-Monaco/img/main3_4.png" alt="호텔 계단">
-                </figure>
-
-                <figure class="main3_img main3_img5">
-                    <img src="/Chateau-de-Monaco/img/main3_5.png" alt="호텔 가든">
-                </figure>
-
-                <figure class="main3_img main3_img6">
-                    <img src="/Chateau-de-Monaco/img/main3_6.png" alt="호텔 선셋">
-                </figure>
-
-                <figure class="main3_img main3_img7">
-                    <img src="/Chateau-de-Monaco/img/main3_7.png" alt="와인">
-                </figure>
-
-                <figure class="main3_img main3_img8">
-                    <img src="/Chateau-de-Monaco/img/main3_8.png" alt="불꽃놀이">
-                </figure>
-
-                <figure class="main3_img main3_img9">
-                    <img src="/Chateau-de-Monaco/img/main3_9.png" alt="불꽃놀이">
-                </figure>
-
-                <figure class="main3_img main3_img10">
-                    <img src="/Chateau-de-Monaco/img/main3_10.png" alt="불꽃놀이">
-                </figure>
-
-                <article class="main3_right">
-
-                    <h2 class="h3_en">
-                        Under the Sky.
-                    </h2>
-
-                    <div class="main3_text2_1 main3_desc">
-                        <p class="text_en">Private yachts.</p>
-                        <p class="text_en">Golden lights.</p>
-                        <p class="text_en">Fireworks above the sea.</p>
-                    </div>
-
-                    <div class="main3_text2_2 main3_desc">
-                        <p class="text_en">
-                            Every celebration
-                        </p>
-
-                        <p class="text_en">
-                            becomes a memory
-                        </p>
-
-                        <p class="text_en">
-                            to cherish.
-                        </p>
-                    </div> <!-- .main3_desc -->
-
-                </article> <!-- .main3_right -->
+                </div>
 
             </div> <!-- .main3_wrap -->
         </section> <!-- .main3 -->
@@ -145,6 +252,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // 헤더,푸터 불러오기
         $(function () {
@@ -174,7 +282,10 @@
             });
         });
 
-
+        // 권장 화면 안내 모달
+        $('.res_btn').on('click', function () {
+            $('#resolutionModal').fadeOut(500);
+        });
 
 
         // stage
@@ -318,51 +429,47 @@
         }
 
 
-        // 딜레이 스티키
-        $(window).scroll(function () {
-            const wScroll = $(this).scrollTop();
-            const sectionTop = $('#delay').offset().top;
-            const stages = ['.delay_1', '.delay_2', '.delay_3', '.delay_4', '.delay_5', '.delay_6'];
-            const buffer = $(window).height();  // 마지막에 남겨둘 여유 구간(1화면 분량)
-            const stepHeight = ($('#delay').height() - buffer) / stages.length;
-            // #delay의 높이에서 stages의 개수만큼나눠서 균일하게 지정
+    
+        // 딜레이
+        $(window).on('scroll', function () {
 
-            stages.forEach(function (sel, i) {
-                if (wScroll >= sectionTop + i * stepHeight) {
-                    $(sel).addClass('show');
-                } else {
-                    $(sel).removeClass('show');
-                }
-            });
-        });
-
-        // 딜레이 스티키
-        $(window).scroll(function () {
             const wScroll = $(this).scrollTop();
+
             const delayTop = $('#delay').offset().top;
-            const delayBottom = delayTop + $("#delay").outerHeight();
+            const delayBottom = delayTop + $('#delay').outerHeight();
 
+            // 헤더 색상 변경
             if (wScroll >= delayTop && wScroll < delayBottom) {
-                $("#header").addClass("change");
+                $('#header').addClass('change');
             } else {
-                $("#header").removeClass("change");
+                $('#header').removeClass('change');
             }
 
+            // 이미지/텍스트 순차 등장
+            const stages = [
+                '.delay_1',
+                '.delay_2',
+                '.delay_3',
+                '.delay_4',
+                '.delay_5',
+                '.delay_6'
+            ];
 
-            const stages = ['.delay_1', '.delay_2', '.delay_3', '.delay_4', '.delay_5', '.delay_6'];
             const buffer = $(window).height();  // 마지막에 남겨둘 여유 구간(1화면 분량)
             const stepHeight = ($('#delay').height() - buffer) / stages.length;
             // #delay의 높이에서 stages의 개수만큼나눠서 균일하게 지정
 
             stages.forEach(function (sel, i) {
+
                 if (wScroll >= delayTop + i * stepHeight) {
                     $(sel).addClass('show');
                 } else {
                     $(sel).removeClass('show');
                 }
-            });
-        });
 
+            });
+
+        });
 
 
 
@@ -526,11 +633,39 @@
 
             });
 
-
             // 이미지 로딩 후 위치 재계산
             window.addEventListener("load", function () {
                 ScrollTrigger.refresh();
             });
+        });
+
+        // main3_960이하
+        const main3Swiper = new Swiper('.main3_swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+
+            freeMode: {
+                enabled: true,
+                momentum: true,
+                momentumRatio: 0.8,
+                momentumVelocityRatio: 0.8,
+            },
+
+            grabCursor: true,
+
+            breakpoints: {
+                0: {
+                    spaceBetween: 15,
+                },
+
+                600: {
+                    spaceBetween: 20,
+                },
+
+                768: {
+                    spaceBetween: 25,
+                }
+            }
         });
     </script>
 </body>
