@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+#contents {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main3 {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 /* experiences */
 #experiences_3{
     /* perspective:1200px; */
