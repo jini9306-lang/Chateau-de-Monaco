@@ -40,14 +40,16 @@ const Stay = () => {
 
   // 푸터의 #gallery, #pool 같은 해시로 들어오면 해당 시설 문을 바로 열어서 보여줌
   useEffect(() => {
-    const hashId = window.location.hash.slice(1)
-    if (!hashId) return
-    const match = facilities.find((item) => item.button.toLowerCase() === hashId)
-    if (match) {
-      setActiveId(match.id)
-      setIsOpen(true)
-    }
-  }, [])
+  const params = new URLSearchParams(window.location.search)
+  const targetId = params.get('item')
+  if (!targetId) return
+
+  const match = facilities.find((item) => item.id === targetId)
+  if (match) {
+    setActiveId(match.id)
+    setIsOpen(true)
+  }
+}, [])
 
   return (
     <section className="stay_pc" id='stay_pc'>

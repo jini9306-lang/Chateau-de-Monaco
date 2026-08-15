@@ -42,11 +42,11 @@ const Footer = () => {
                         <h4 class="h4_ko">EXPERIENCES</h4>
                     </a>
                     <div class="list 2">
-                        <a href="/Chateau-de-Monaco/experiences/index.html#birthday" class="text_ko"><span>생일</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html#spa" class="text_ko"><span>스파</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html#proposal" class="text_ko"><span>프로포즈</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html#anniversary" class="text_ko"><span>기념일</span></a>
-                        <a href="/Chateau-de-Monaco/experiences/index.html#honeymoon" class="text_ko"><span>허니문</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=birthday" class="text_ko"><span>생일</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=spa" class="text_ko"><span>스파</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=proposal" class="text_ko"><span>프로포즈</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=anniversary" class="text_ko"><span>기념일</span></a>
+                        <a href="/Chateau-de-Monaco/experiences/index.html?item=honeymoon" class="text_ko"><span>허니문</span></a>
                     </div>
                 </article>
                 <article id="location">
