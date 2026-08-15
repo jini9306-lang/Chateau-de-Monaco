@@ -93,6 +93,9 @@
   .detail{
     border-bottom: 1px solid var(--fontMainColor);
   }
+  .detail:last-child{
+    border-bottom: 1px solid var(--fontMainColor);
+  }
   .detail .info{
     justify-content: space-evenly;
   }
