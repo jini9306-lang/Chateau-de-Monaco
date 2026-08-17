@@ -30,7 +30,7 @@ const Header = ({ logoColor = 'green', navStatic = true, language = 'FR', onLang
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
               <li><a href="/Chateau-de-Monaco/index.html"><span>ACCUEIL</span></a></li>
-              <li><a href="/Chateau-de-Monaco/stay/stay-fr.html"><span>SÉJOUR</span></a></li>
+              <li><a href="/Chateau-de-Monaco/stay/index.html"><span>SÉJOUR</span></a></li>
               <li><a href="/Chateau-de-Monaco/experiences/experiences-fr.html"><span>EXPÉRIENCES</span></a></li>
               <li><a href="/Chateau-de-Monaco/location/location-fr.html"><span>LOCALISATION</span></a></li>
               <li><a href="/Chateau-de-Monaco/reservation/reservation-fr.html"><span>RÉSERVATION</span></a></li>

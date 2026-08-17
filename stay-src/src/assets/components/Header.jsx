@@ -30,11 +30,12 @@ const Header = ({ logoColor = 'green', navStatic = true, language = 'KO', onLang
           </h1>
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
-              <li><a href="/Chateau-de-Monaco/"><span>홈</span></a></li>
-              <li><a href="/Chateau-de-Monaco/stay/"><span>부대시설</span></a></li>
-              <li><a href="/Chateau-de-Monaco/experiences/"><span>이벤트</span></a></li>
-              <li><a href="/Chateau-de-Monaco/location/"><span>주변관광지</span></a></li>
-              <li><a href="/Chateau-de-Monaco/reservation/"><span>예약</span></a></li>
+              
+              <li><a href="/Chateau-de-Monaco/index.html"><span>홈</span></a></li>
+              <li><a href="/Chateau-de-Monaco/stay/index.html"><span>부대시설</span></a></li>
+              <li><a href="/Chateau-de-Monaco/experiences/experiences.html"><span>이벤트</span></a></li>
+              <li><a href="/Chateau-de-Monaco/location/location.html"><span>주변관광지</span></a></li>
+              <li><a href="/Chateau-de-Monaco/reservation/reservation.html"><span>예약</span></a></li>
             </ul>
             <div className="translate">
               <select
