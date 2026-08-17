@@ -17,12 +17,12 @@ import facilitiesFr from './assets/data/facilities-fr.json'
 
 const App = () => {
   const [language, setLanguage] = useState(
-    () => localStorage.getItem('siteLanguage') || 'KO'
+    () => localStorage.getItem('language') || 'KO'
   )
 
   const handleLanguageChange = (lang) => {
     setLanguage(lang)
-    localStorage.setItem('siteLanguage', lang)
+    localStorage.setItem('language', lang)
   }
 
   const languageContent = {
