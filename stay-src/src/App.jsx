@@ -16,7 +16,14 @@ import facilitiesEn from './assets/data/facilities-en.json'
 import facilitiesFr from './assets/data/facilities-fr.json'
 
 const App = () => {
-  const [language, setLanguage] = useState('KO')
+  const [language, setLanguage] = useState(
+    () => localStorage.getItem('siteLanguage') || 'KO'
+  )
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang)
+    localStorage.setItem('siteLanguage', lang)
+  }
 
   const languageContent = {
     KO: { HeaderComponent: Header, FooterComponent: Footer, facilities: facilitiesKo },
