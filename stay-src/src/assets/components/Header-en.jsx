@@ -2,19 +2,18 @@ import React, { useState } from 'react'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import '../css/header.css'
 
-
-const Header = ({ logoColor = 'green', navStatic = true, language = 'KO', onLanguageChange }) => {
+const Header = ({ logoColor = 'green', navStatic = true, language = 'EN', onLanguageChange }) => {
   const isDesktop = useMediaQuery('(min-width: 961px)')
   const [isOpen, setIsOpen] = useState(false)
 
-  // 데스크탑 + navStatic 페이지만 "항상 열림", 그 외엔 isOpen 상태를 따름
+  // Always open only on desktop pages with navStatic; otherwise follow isOpen.
   const navShown = (navStatic && isDesktop) || isOpen
 
   const handleLogoClick = (e) => {
-    // 데스크탑 + navStatic: 토글할 필요 없이 그냥 링크로 이동
+    // Desktop + navStatic: follow the link without toggling.
     if (navStatic && isDesktop) return
 
-    // 그 외(모바일이거나, navStatic이 아닌 페이지): 토글
+    // Otherwise (mobile or a page without navStatic): toggle.
     e.preventDefault()
     setIsOpen((prev) => !prev)
   }
@@ -30,11 +29,11 @@ const Header = ({ logoColor = 'green', navStatic = true, language = 'KO', onLang
           </h1>
           <nav className={`nav ${navShown ? 'nav_open' : ''}`}>
             <ul>
-              <li><a href="/Chateau-de-Monaco/"><span>홈</span></a></li>
-              <li><a href="/Chateau-de-Monaco/stay/"><span>부대시설</span></a></li>
-              <li><a href="/Chateau-de-Monaco/experiences/"><span>이벤트</span></a></li>
-              <li><a href="/Chateau-de-Monaco/location/"><span>주변관광지</span></a></li>
-              <li><a href="/Chateau-de-Monaco/reservation/"><span>예약</span></a></li>
+              <li><a href="/Chateau-de-Monaco/index.html"><span>HOME</span></a></li>
+              <li><a href="/Chateau-de-Monaco/stay/stay-en.html"><span>STAY</span></a></li>
+              <li><a href="/Chateau-de-Monaco/experiences/experiences-en.html"><span>EXPERIENCES</span></a></li>
+              <li><a href="/Chateau-de-Monaco/location/location-en.html"><span>LOCATION</span></a></li>
+              <li><a href="/Chateau-de-Monaco/reservation/reservation-en.html"><span>RESERVATION</span></a></li>
             </ul>
             <div className="translate">
               <select

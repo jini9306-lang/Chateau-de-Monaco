@@ -235,26 +235,26 @@ const menuPageTitle = document.getElementById("pageTitle");
 // 예시 구성 — 실제 메뉴 문구는 별도로 교체
 const menuGroups = [
   {
-    course: "전채 요리",
+    course: "Entrées",
     dishes: [
-      ["제철 채소 & 부라타", "78", "올리브 오일과 발사믹 글레이즈"],
-      ["참치 타르타르", "86", "아보카도와 라임"],
-      ["가리비 카르파초", "92", "트러플 오일과 시트러스"],
+      ["Légumes de saison & burrata", "78", "Huile d'olive et réduction balsamique"],
+      ["Tartare de thon", "86", "Avocat et citron vert"],
+      ["Carpaccio de Saint-Jacques", "92", "Huile de truffe et agrumes"],
     ],
   },
   {
-    course: "메인 요리",
+    course: "Plats",
     dishes: [
-      ["허브 크러스트 양갈비", "145", "로즈마리 주와 제철 채소"],
-      ["그릴에 구운 지중해 농어", "160", "아티초크와 레몬 뵈르 블랑"],
-      ["숙성 소 안심", "175", "그라탱 도피누아와 함께 제공"],
+      ["Carré d'agneau en croûte d'herbes", "145", "Jus au romarin et légumes de saison"],
+      ["Bar de Méditerranée grillé", "160", "Artichaut et beurre blanc au citron"],
+      ["Filet de bœuf maturé", "175", "Servi avec un gratin dauphinois"],
     ],
   },
   {
-    course: "디저트",
+    course: "Desserts",
     dishes: [
-      ["바닐라 밀푀유", "42", "마다가스카르산 바닐라 크림"],
-      ["초콜릿 수플레", "48", "피스타치오 아이스크림"],
+      ["Mille-feuille à la vanille", "42", "Crème à la vanille de Madagascar"],
+      ["Soufflé au chocolat", "48", "Glace à la pistache"],
     ],
   },
 ];
@@ -293,18 +293,18 @@ const lunchSlots = ["12:00", "13:00", "14:00"];
 const dinnerSlots = ["19:00", "20:00", "21:00", "22:00"];
 
 resFront.innerHTML = `
-  <div class="res-section-label">점심</div>
+  <div class="res-section-label">Déjeuner</div>
   <div class="slot-grid" id="lunchGrid">
     ${lunchSlots.map((t) => `<button type="button" class="slot-btn" data-time="${t}">${t}</button>`).join("")}
   </div>
 
-  <div class="res-section-label">저녁</div>
+  <div class="res-section-label">Dîner</div>
   <div class="slot-grid" id="dinnerGrid">
     ${dinnerSlots.map((t) => `<button type="button" class="slot-btn" data-time="${t}">${t}</button>`).join("")}
   </div>
 
   <div class="party-row">
-    <span class="label">인원</span>
+    <span class="label">Nombre de personnes</span>
     <div class="stepper">
       <button type="button" id="partyMinus">&minus;</button>
       <span class="count" id="partyCount">2</span>
@@ -312,7 +312,7 @@ resFront.innerHTML = `
     </div>
   </div>
 
-  <button type="button" class="reserve-btn" id="reserveBtn" disabled>예약하기</button>
+  <button type="button" class="reserve-btn" id="reserveBtn" disabled>Réserver</button>
   <div class="res-confirm" id="resConfirm"></div>
 `;
 
@@ -359,7 +359,7 @@ partyPlus.addEventListener("click", () => {
 stopBubble(reserveBtn);
 reserveBtn.addEventListener("click", () => {
   if (!selectedTime) return;
-  resConfirm.textContent = `${partyCount}명의 ${selectedTime} 예약이 요청되었습니다.`;
+  resConfirm.textContent = `Votre réservation pour ${partyCount} personne(s) à ${selectedTime} a bien été enregistrée.`;
   resConfirm.classList.add("show");
 });
 
@@ -376,7 +376,7 @@ let menuViewportWidth = 0;
 
 function updateMenuDots() {
   menuDots.forEach((d, i) => d.classList.toggle("active", i === currentMenuIndex));
-  menuPageTitle.textContent = currentMenuIndex === 0 ? "메뉴" : "예약";
+  menuPageTitle.textContent = currentMenuIndex === 0 ? "Menu" : "Réservation";
 }
 
 const menuTurnShadow = document.getElementById("turnShadow");

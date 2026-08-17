@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Château de Monaco</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<!-- 지도api -->
+<link rel="stylesheet" href="/Chateau-de-Monaco/css/font.css">
+<link rel="stylesheet" href="/Chateau-de-Monaco/css/vars.css">
+<link rel="stylesheet" href="/Chateau-de-Monaco/css/common.css">
+<link rel="stylesheet" href="/Chateau-de-Monaco/location/css/style.css">
+<link rel="stylesheet" href="/Chateau-de-Monaco/location/css/media.css">
+<link rel="stylesheet" href="/Chateau-de-Monaco/css/intro.css">
+
+<link rel="icon" href="/Chateau-de-Monaco/img/icon.png">
+
+</head>
+<body data-logo="green" data-nav="static">
+
+  <div id="siteIntro">
+    <div class="intro__lockup">
+      <p class="intro__eyebrow">Château de</p>
+      <div class="intro__bar"><div id="introBarFill"></div></div>
+      <h1 class="intro__title">Monaco</h1>
+    </div>
+  </div>
+
+  <div id="header-include"></div>
+
+  <section class="banner">
+    <div class="banner-bg banner-bg-a" style="background-image:url('imgs/banner_default.jpg')"></div>
+    <div class="banner-bg banner-bg-b"></div>
+    <div class="banner-content">
+      <h1 class="banner-title">LOCAL HIGHTLIGHTS</h1>
+      <p class="banner-subtitle">MONTE CARLO, MONACO</p>
+      <div class="banner-transit">
+        <span class="transit-item" data-banner="imgs/banner_2.jpg">Nice Airport</span>
+        <span class="transit-item" data-banner="imgs/banner_1.jpg">Monaco&ndash;Monte-Carlo Station</span>
+        <span class="transit-item" data-banner="imgs/banner_3.jpg">Port Hercule</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+
+    <section class="section arrival" id="directions">
+      <h2 class="section-title">ARRIVAL</h2>
+      <div class="card-row arrival-row">
+        <article class="arrival-card">
+          <div class="arrival-card-body">
+            <h3 class="arrival-card-title">Aéroport Nice Côte d'Azur</h3>
+            <p class="arrival-card-desc">La Méditerranée, sept minutes en contrebas</p>
+            <div class="arrival-detail" hidden>
+              <p class="arrival-detail-text"> Un transfert privé vous attend à la sortie de l'aéroport et longe la Basse Corniche jusqu'à ce que la Méditerranée laisse place au Rocher de Monaco. </p>
+              <p class="arrival-detail-fact"> 35 km &middot; Chauffeur privé sur demande </p>
+            </div>
+          </div>
+          <button class="detail-btn" type="button">Detail</button>
+        </article>
+        <article class="arrival-card">
+          <div class="arrival-card-body">
+            <h3 class="arrival-card-title">Gare de Monaco–Monte-Carlo</h3> 
+            <p class="arrival-card-desc">Vingt-cinq minutes le long de la côte</p>
+            <div class="arrival-detail" hidden>
+              <p class="arrival-detail-text"> Le quai donne directement sur l'Avenue Prince Pierre — des porteurs sont à votre disposition, une voiture vous attend et le Casino se trouve à quelques pas. </p> <p class="arrival-detail-fact"> Nice &middot; 25 min &nbsp;|&nbsp; Cannes &middot; 55 min &nbsp;|&nbsp; TGV direct </p>
+            </div>
+          </div>
+          <button class="detail-btn" type="button">Detail</button>
+        </article>
+        <article class="arrival-card">
+          <div class="arrival-card-body">
+            <h3 class="arrival-card-title">Autoroute A8</h3> 
+            <p class="arrival-card-desc">Vos clés vous sont remises à l'entrée</p>
+            <div class="arrival-detail" hidden>
+              <p class="arrival-detail-text"> Parcourez la corniche à votre rythme ou laissez votre chauffeur vous guider. Dans tous les cas, notre service de voiturier vous attend dès votre arrivée. </p> 
+              <p class="arrival-detail-fact"> Conduite personnelle ou avec chauffeur &middot; Voiturier inclus </p>
+            </div>
+          </div>
+          <button class="detail-btn" type="button">Detail</button>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="section attractions" id="spot">
+      <h2 class="section-title">Nearby Attractions</h2>
+      <div class="card-row attractions-row">
+        <article class="attraction-card attraction-card--clickable" id="louisXvCard" role="button" tabindex="0">
+          <div class="attraction-img" style="background-image:url('imgs/le_louis_xv_cinematic.png')"></div>
+          <h3 class="attraction-name">Le Louis XV</h3>
+        </article>
+        <article class="attraction-card attraction-card--clickable" id="casinoCard" role="button" tabindex="0">
+          <div class="attraction-img" style="background-image:url('imgs/casino_de_monte_carlo_dramatic.png')"></div>
+          <h3 class="attraction-name">Casino de Monte-Carlo</h3>
+        </article>
+        <article class="attraction-card attraction-card--clickable" id="portCard" role="button" tabindex="0">
+          <div class="attraction-img" style="background-image:url('imgs/port_hercule_sunset_dreamy.png')"></div>
+          <h3 class="attraction-name">Port Hercule</h3>
+        </article>
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="menuModal">
+      <div class="menu-modal">
+        <button class="modal-close" id="closeMenuBtn" aria-label="Close">&times;</button>
+
+        <div class="menu-header">
+          <div class="menu-eyebrow">Le Louis XV</div>
+          <h3 class="menu-modal-title" id="pageTitle">Menu</h3>
+        </div>
+
+        <div class="book-viewport" id="bookViewport">
+          <div class="book" id="book"></div>
+          <div class="turn-shadow" id="turnShadow"></div>
+        </div>
+
+        <div class="book-footer">
+          <div class="page-dots" id="pageDots"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="casinoModal">
+      <div class="menu-modal info-modal casino-modal">
+        <button class="modal-close" id="closeCasinoBtn" aria-label="Close" type="button">&times;</button>
+
+        <div class="menu-header">
+          <div class="menu-eyebrow">Casino de Monte-Carlo</div>
+          <h3 class="menu-modal-title">Informations aux visiteurs</h3>
+        </div>
+
+        <div class="info-page page-face">
+          <p class="info-desc"> Les salles de jeux Belle Époque où la fortune se joue depuis 1863 — atriums en marbre, plafonds dorés et silence feutré de la roulette. </p> 
+          
+          <div class="course-label">Horaires</div> 
+          <p class="info-text"> Les salles de jeux publiques sont ouvertes tous les jours à partir de 14 h. </p> 
+          
+          <div class="course-label">Tenue</div> 
+          <p class="info-text"> Tenue élégante et décontractée en journée ; veste obligatoire dans les salles privées après 20 h. </p> 
+          
+          <div class="course-label">Entrée</div> 
+          <p class="info-text"> Une pièce d'identité est requise. Un petit droit d'entrée s'applique aux salles de jeux ; l'atrium et les terrasses sont accessibles à tous. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="portModal">
+      <div class="menu-modal info-modal port-modal">
+        <button class="modal-close" id="closePortBtn" aria-label="Close" type="button">&times;</button>
+
+        <div class="menu-header">
+          <div class="menu-eyebrow">Port Hercule</div>
+          <h3 class="menu-modal-title">Guide du port</h3>
+        </div>
+
+        <div class="info-page page-face">
+          <p class="info-desc"> Le port naturel en eau profonde de Monaco, bordé de superyachts et des falaises du Rocher — le cœur battant de la Principauté depuis l'Antiquité. </p> 
+          
+          <div class="course-label">À découvrir</div> 
+          <p class="info-text"> Promenades au coucher du soleil le long du quai, observation des yachts et terrasse du Café de Paris juste au-dessus. </p> 
+          
+          <div class="course-label">Saison du Grand Prix</div> 
+          <p class="info-text"> Chaque mois de mai, le port devient l'épicentre du Grand Prix de Monaco — des tribunes s'élèvent au bord de l'eau. </p> 
+          
+          <div class="course-label">Comment s'y rendre</div> 
+          <p class="info-text"> Dix minutes à pied en descendant depuis le Casino, ou directement en bateau jusqu'à la marina. </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <section class="section explore-map">
+      <h2 class="section-title">EXPLORE THE MAP</h2>
+
+      <div class="map-panel">
+        <aside class="map-sidebar">
+          <div class="map-tabs">
+            <button class="map-tab is-active" data-filter="all" type="button">Tout</button>
+            <button class="map-tab" data-filter="dining" type="button">Restaurants</button>
+            <button class="map-tab" data-filter="tour" type="button">Visites</button>
+            <button class="map-tab" data-filter="shopping" type="button">Shopping</button>
+          </div>
+          <ul class="map-list" id="mapList"></ul>
+          <div class="map-pagination" id="mapPagination"></div>
+        </aside>
+
+        <div class="map-canvas-wrap">
+          <div id="map"></div>
+          <div class="map-detail-card" id="mapDetailCard" hidden>
+            <button class="map-detail-close" id="mapDetailClose" aria-label="Close" type="button">&times;</button>
+            <div class="map-detail-photo" id="mapDetailPhoto"></div>
+            <div class="map-detail-body">
+              <div class="map-detail-name" id="mapDetailName"></div>
+              <span class="map-detail-badge" id="mapDetailBadge"></span>
+              <p class="map-detail-blurb" id="mapDetailBlurb"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-include"></div>
+
+<script src="/Chateau-de-Monaco/js/intro.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="places.js"></script>
+<script src="script-fr.js"></script>
+<script src="/Chateau-de-Monaco/js/language.js"></script>
+<script>
+
+  // 헤더,푸터 불러오기
+  $(function () {
+      $("#header-include").load("/Chateau-de-Monaco/partials/header-fr.html", function () {
+          // 헤더 로드 완료 후 로고 색 적용
+          const logoColor = $("body").data("logo") || "white"; // 기본값 white
+          $("#logoImg").attr("src", "/Chateau-de-Monaco/img/logo_" + logoColor + ".png");
+
+          // 서브 페이지는 처음부터 .change 상태로 고정 (진한 글자색 사용)
+          if ($('body').attr('data-nav') === 'static') {
+              $('#header').addClass('change');
+          }
+
+          // 기존 로고 클릭 토글 로직도 여기서 초기화
+          $('.logo a').on('click', function (e) {
+              e.preventDefault();
+              $('.nav').toggleClass('nav_open');
+          });
+      });
+
+      $("#footer-include").load("/Chateau-de-Monaco/partials/footer-fr.html");
+  });
+
+  $('.logo a').on('click', function (e) {
+      if ($('body').attr('data-nav') === 'static') return;  // 서브 페이지는 그냥 이동
+      e.preventDefault();
+      $('.nav').toggleClass('nav_open');
+  });
+
+  // footer 모달
+  $(document).on('click', '.footer_privacy', function (e) {
+      e.preventDefault();
+
+      $('#footerModal').addClass('active');
+
+      // 영상 모달
+      $('.footer_video').show();
+      $('.footer_notice_text').hide();
+
+      // 영상 처음부터 재생
+      const video = $('.footer_video video')[0];
+
+      if (video) {
+          video.currentTime = 0;
+          video.play();
+      }
+  });
+
+
+  // 이용약관 / 쿠키정책 / 사이트맵
+  $(document).on('click', '.footer_notice', function (e) {
+      e.preventDefault();
+
+      $('#footerModal').addClass('active');
+
+      // 안내 문구 모달
+      $('.footer_video').hide();
+      $('.footer_notice_text').show();
+  });
+
+
+  // 닫기 버튼
+  $(document).on('click', '.footer_modal_close', function () {
+      closeFooterModal();
+  });
+
+
+  // 배경 클릭하면 닫기
+  $(document).on('click', '.footer_modal_bg', function () {
+      closeFooterModal();
+  });
+
+
+  // 모달 닫기 함수
+  function closeFooterModal() {
+      $('#footerModal').removeClass('active');
+
+      const video = $('.footer_video video')[0];
+
+      if (video) {
+          video.pause();
+          video.currentTime = 0;
+      }
+  }
+</script>
+</body>
+</html>

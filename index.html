@@ -248,28 +248,66 @@
 
     <div id="footer-include"></div>  <!-- 여기에 footer.html 로드 -->
 
-    <script src="./intro.js"></script>
+    <script src="/Chateau-de-Monaco/js/intro.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/Chateau-de-Monaco/js/language.js"></script>
     <script>
         // 헤더,푸터 불러오기
         $(function () {
-            $("#header-include").load("/Chateau-de-Monaco/partials/header.html", function () {
-                // 헤더 로드 완료 후 로고 색 적용
-                const logoColor = $("body").data("logo") || "white"; // 기본값 white
-                $("#logoImg").attr("src", "/Chateau-de-Monaco/img/logo_" + logoColor + ".png");
 
-                // 기존 로고 클릭 토글 로직도 여기서 초기화
-                $('.logo a').on('click', function (e) {
-                    e.preventDefault();
-                    $('.nav').toggleClass('nav_open');
-                });
-            });
+            // 현재 선택된 언어 가져오기
+            const language = localStorage.getItem("language") || "KO";
 
-            $("#footer-include").load("/Chateau-de-Monaco/partials/footer.html");
+            // 언어별 헤더 / 푸터 파일
+            let headerFile = "header.html";
+            let footerFile = "footer.html";
+
+            if (language === "EN") {
+                headerFile = "header-en.html";
+                footerFile = "footer-en.html";
+            } 
+            else if (language === "FR") {
+                headerFile = "header-fr.html";
+                footerFile = "footer-fr.html";
+            }
+
+            // 헤더 불러오기
+            $("#header-include").load(
+                "/Chateau-de-Monaco/partials/" + headerFile,
+                function () {
+
+                    // 헤더 로드 완료 후 로고 색 적용
+                    const logoColor = $("body").data("logo") || "white";
+
+                    $("#logoImg").attr(
+                        "src",
+                        "/Chateau-de-Monaco/img/logo_" + logoColor + ".png"
+                    );
+
+                    if ($("body").attr("data-nav") === "static") {
+                        $("#header").addClass("change");
+                    }
+
+                    // 기존 로고 클릭 토글 로직도 여기서 초기화
+                    $(".logo a").on("click", function (e) {
+                        if ($("body").attr("data-nav") === "static") return;
+
+                        e.preventDefault();
+                        $(".nav").toggleClass("nav_open");
+                    });
+                }
+            );  
+
+            // 푸터 불러오기
+            $("#footer-include").load(
+                "/Chateau-de-Monaco/partials/" + footerFile
+            );
+
         });
+    
 
         // 헤더로고 토글
         $(function () {

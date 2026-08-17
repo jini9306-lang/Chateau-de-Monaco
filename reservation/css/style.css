@@ -74,7 +74,6 @@
 }
 .reservation .art_wrap article .invisible .request{
     font-size: 1.8rem;
-    font-family: var(--titleFontKo);
     font-weight: 400;
 }
 .reservation .art_wrap article .invisible ul{

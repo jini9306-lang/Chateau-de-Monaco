@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -207,16 +207,17 @@
 
   <div id="footer-include"></div>
 
-<script src="/Chateau-de-Monaco/intro.js"></script>
+<script src="/Chateau-de-Monaco/js/intro.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="places.js"></script>
-<script src="script.js"></script>
+<script src="script-en.js"></script>
+<script src="/Chateau-de-Monaco/js/language.js"></script>
 <script>
 
   // 헤더,푸터 불러오기
   $(function () {
-      $("#header-include").load("/Chateau-de-Monaco/partials/header.html", function () {
+      $("#header-include").load("/Chateau-de-Monaco/partials/header-en.html", function () {
           // 헤더 로드 완료 후 로고 색 적용
           const logoColor = $("body").data("logo") || "white"; // 기본값 white
           $("#logoImg").attr("src", "/Chateau-de-Monaco/img/logo_" + logoColor + ".png");
@@ -233,7 +234,7 @@
           });
       });
 
-      $("#footer-include").load("/Chateau-de-Monaco/partials/footer.html");
+      $("#footer-include").load("/Chateau-de-Monaco/partials/footer-en.html");
   });
 
   $('.logo a').on('click', function (e) {
@@ -297,11 +298,6 @@
           video.currentTime = 0;
       }
   }
-
-  // 권장 화면 안내 모달
-  $('.res_btn').on('click', function () {
-      $('#resolutionModal').fadeOut(500);
-  });
 </script>
 </body>
 </html>

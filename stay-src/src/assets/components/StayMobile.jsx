@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react'
 import StayDetail from './StayDetail'
-import facilitiesData from '../data/facilities.json'
-
 import '../css/staymobile.css'
 
-const facilities = facilitiesData.facilities
-
-const StayMobile = () => {
+const StayMobile = ({ facilities }) => {
   // 푸터의 #gallery, #pool 같은 해시로 들어오면 해당 시설 카드로 스크롤
   useEffect(() => {
     const hashId = window.location.hash.slice(1)

@@ -1,0 +1,40 @@
+{
+  "facilities": [
+    {
+      "id": "art-gallery", "type": "facility", "title": "ART GALLERY", "button": "GALLERY", "tagline": "Where Art Meets Hospitality", "image": "img/gallery.png", "primaryLabel": "Highlights",
+      "primaryItems": ["Curated Collection", "Seasonal Exhibition", "Sculpture Hall", "Gallery Lounge"],
+      "secondaryLabel": "Operating Hours", "secondaryItems": ["09:00 - 20:00"],
+      "description": "Throughout the hotel, carefully selected paintings and sculptures are on display. Enjoy a distinctive stay that feels like a stroll through a gallery."
+    },
+    {
+      "id": "infinity-pool", "type": "facility", "title": "INFINITY POOL", "button": "POOL", "tagline": "A Boundless View", "image": "img/pool.png", "primaryLabel": "Highlights",
+      "primaryItems": ["Infinity Ocean View", "Private Cabana", "Heated Pool", "Pool Bar Service"],
+      "secondaryLabel": "Operating Hours", "secondaryItems": ["08:00 - 21:00"],
+      "description": "Experience peaceful relaxation in an infinity pool where sky and sea become one. Take in the clear ocean, enjoy unhurried moments, and indulge in the ultimate escape in a private cabana."
+    },
+    {
+      "id": "signature-restaurant", "type": "facility", "title": "SIGNATURE RESTAURANT", "button": "RESTAURANT", "tagline": "Fine Dining by the Sea", "image": "img/restaurant.png", "primaryLabel": "Highlights",
+      "primaryItems": ["Breakfast Buffet", "Signature Course", "Ocean Terrace", "Wine Pairing"],
+      "secondaryLabel": "Operating Hours", "secondaryItems": ["Breakfast 07:00 - 10:00", "Lunch 12:00 - 15:00", "Dinner 18:00 - 22:00"],
+      "description": "Savor course menus crafted with local ingredients and seasonal flavors, served with beautiful ocean views. Experience refined dining from morning through evening."
+    },
+    {
+      "id": "spa-wellness", "type": "facility", "title": "SPA & WELLNESS", "button": "SPA", "tagline": "A Moment of Serenity", "image": "img/spa.png", "primaryLabel": "Highlights",
+      "primaryItems": ["Aroma Therapy", "Marble Jacuzzi", "Steam Sauna", "Relaxation Lounge"],
+      "secondaryLabel": "Operating Hours", "secondaryItems": ["10:00 - 22:00"],
+      "description": "Restore balance to body and mind through wellness programs amid gentle aromas and warm lighting. Discover personalized care from skilled therapists."
+    },
+    {
+      "id": "standard-room", "type": "room", "title": "STANDARD ROOM", "button": "STANDARD", "tagline": "Classic Comfort", "image": "img/standard.png", "primaryLabel": "Room Information",
+      "primaryItems": ["35㎡", "Garden View", "King Bed / Twin Bed", "Rain Shower", "High-speed Wi-Fi"],
+      "secondaryLabel": "Amenities", "secondaryItems": ["Smart TV", "Coffee Machine", "Mini Bar", "Bath Amenities", "Safe Box"],
+      "description": "A room where understated classic design meets natural light. Enjoy comfortable rest in a cozy setting."
+    },
+    {
+      "id": "suite-room", "type": "room", "title": "SUITE ROOM", "button": "SUITE", "tagline": "Timeless Luxury", "image": "img/suite.png", "primaryLabel": "Room Information",
+      "primaryItems": ["70㎡", "Ocean View", "Separate Living Room", "Marble Bathroom", "Walk-in Closet"],
+      "secondaryLabel": "Amenities", "secondaryItems": ["Espresso Machine", "Premium Mini Bar", "Luxury Bath Collection", "Bluetooth Speaker", "Concierge Service"],
+      "description": "A suite with a separate, spacious living room and bedroom. Experience the finest relaxation with expansive ocean views and a private setting."
+    }
+  ]
+}
