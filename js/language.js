@@ -1,5 +1,10 @@
 (function () {
   const languageRoutes = {
+    "/Chateau-de-Monaco/": {
+      KO: "/Chateau-de-Monaco/",
+      EN: "/Chateau-de-Monaco/",
+      FR: "/Chateau-de-Monaco/"
+    },
     "/Chateau-de-Monaco/index.html": {
         KO: "/Chateau-de-Monaco/index.html",
         EN: "/Chateau-de-Monaco/index.html",
