@@ -379,12 +379,13 @@ body[data-nav="static"] #header {
 /* 영상 */
 .footer_video {
     width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .footer_video iframe {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     border: none;
 }
 

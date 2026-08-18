@@ -141,6 +141,7 @@
 /* 영상 */
 .footer_video {
     width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .footer_video iframe {
