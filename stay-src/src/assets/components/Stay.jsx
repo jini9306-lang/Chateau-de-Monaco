@@ -31,27 +31,25 @@ const Stay = ({ facilities }) => {
     },1000)                          
     // CSS transition 시간(0.8s)과 맞춤
   }
+  const handledInitialQuery = useRef(false)
+
+  useEffect(() => {
+    if (handledInitialQuery.current) return
+    handledInitialQuery.current = true
+
+    const params = new URLSearchParams(window.location.search)
+    const targetId = params.get('item')
+    if (!targetId) return
+
+    const match = facilities.find((item) => item.id === targetId)
+    if (match) {
+      setActiveId(match.id)
+      setIsOpen(true)
+    }
+  }, [facilities])
   
   // 모달 열림 상태 추가
   const [isModalOpen, setIsModalOpen] = useState(false)
-
-  // 푸터의 #gallery, #pool 같은 해시로 들어오면 해당 시설 문을 바로 열어서 보여줌
-  useEffect(() => {
-  const params = new URLSearchParams(window.location.search)
-  const targetId = params.get('item')
-  console.log('URL 쿼리:', window.location.search)
-  console.log('targetId:', targetId)
-  console.log('facilities ids:', facilities.map(f => f.id))
-
-  if (!targetId) return
-
-  const match = facilities.find((item) => item.id === targetId)
-  console.log('match:', match)
-  if (match) {
-    setActiveId(match.id)
-    setIsOpen(true)
-  }
-}, [facilities])
 
   return (
     <section id='stay_pc'>
