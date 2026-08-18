@@ -381,10 +381,11 @@ body[data-nav="static"] #header {
     width: 100%;
 }
 
-.footer_video video {
+.footer_video iframe {
     display: block;
     width: 100%;
     height: auto;
+    border: none;
 }
 
 /* 안내 문구 */

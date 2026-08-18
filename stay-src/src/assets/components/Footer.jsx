@@ -124,7 +124,7 @@ const Footer = () => {
                     {footerModal === "privacy" && (
                         <div className="footer_video">
                             <iframe
-                                src="https://youtu.be/hZ_I3GG4gvw"
+                                src="https://www.youtube.com/embed/hZ_l3GG4gvw?"
                                 title="개인정보처리방침"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

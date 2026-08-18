@@ -329,14 +329,6 @@
             // 영상 모달
             $('.footer_video').show();
             $('.footer_notice_text').hide();
-
-            // 영상 처음부터 재생
-            const video = $('.footer_video video')[0];
-
-            if (video) {
-                video.currentTime = 0;
-                video.play();
-            }
         });
 
 
@@ -355,6 +347,12 @@
         // 닫기 버튼
         $(document).on('click', '.footer_modal_close', function () {
             closeFooterModal();
+
+            // 영상 초기화
+             $('.footer_video iframe').attr(
+                'src',
+                'https://www.youtube.com/embed/hZ_l3GG4gvw?autoplay=1&mute=1'
+            );
         });
 
 
