@@ -122,14 +122,17 @@ const Footer = () => {
 
                     {/* 개인정보처리방침 */}
                     {footerModal === "privacy" && (
-                        <div className="footer_video">
+                        <div class="footer_video">
                             <iframe
-                                src="https://www.youtube.com/embed/hZ_l3GG4gvw?"
-                                title="개인정보처리방침"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                                width="945"
+                                height="540"
+                                src="https://www.youtube.com/embed/hZ_I3GG4gvw"
+                                title="pi"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     )}
 
