@@ -1,21 +1,13 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 
 import '../css/footer.css'
 
 const Footer = () => {
     const [footerModal, setFooterModal] = useState(null)
-    const videoRef = useRef(null)
     
     // 개인정보처리방침
     const openPrivacy = () => {
         setFooterModal("privacy")
-
-        setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.currentTime = 0
-                videoRef.current.play()
-            }
-        }, 0)
     }
 
 
@@ -27,11 +19,6 @@ const Footer = () => {
 
     // 모달 닫기
     const closeFooterModal = () => {
-        if (videoRef.current) {
-            videoRef.current.pause()
-            videoRef.current.currentTime = 0
-        }
-
         setFooterModal(null)
     }
 
@@ -136,17 +123,13 @@ const Footer = () => {
                     {/* 개인정보처리방침 */}
                     {footerModal === "privacy" && (
                         <div className="footer_video">
-                            <video
-                                ref={videoRef}
-                                controls
-                            >
-                                <source
-                                    src={`${import.meta.env.BASE_URL}img/personal_information.mp4`}
-                                    type="video/mp4"
-                                />
-
-                                브라우저에서 동영상을 재생할 수 없습니다.
-                            </video>
+                            <iframe
+                                src="https://youtu.be/hZ_I3GG4gvw"
+                                title="개인정보처리방침"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     )}
 

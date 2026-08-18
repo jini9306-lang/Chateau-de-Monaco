@@ -143,10 +143,10 @@
     width: 100%;
 }
 
-.footer_video video {
-    display: block;
+.footer_video iframe {
     width: 100%;
-    height: auto;
+    height: 100%;
+    border: none;
 }
 
 /* 안내 문구 */
